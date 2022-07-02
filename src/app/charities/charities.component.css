@@ -14,10 +14,24 @@
   color: white;
 }
 .more-details-btn{
-  color: #59BBA4;
+  float:left;
+  background-color: #59BBA4;
+  color: black;
+  border:none;
+  border-radius: 5px;
 }
 
-  .charities-section {
+.charities-section {
     margin-top: 20px;
 
-  }
+}
+
+.donate-btn{
+  float:right;
+  background-color: #59BBA4;
+  color: black;
+  border:none;
+  border-radius: 5px;
+
+
+}
