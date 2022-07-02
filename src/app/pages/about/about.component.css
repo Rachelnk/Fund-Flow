@@ -1,0 +1,68 @@
+section{
+    min-height: 100vh;
+    width: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fddcc356;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left{
+    width: 50%;
+    min-height: 650px;
+    background: url(../../../assets/imagez/about_girl.jpg)no-repeat center/cover;
+    border-radius: 8px;
+}
+.right{
+    width: 50%;
+    min-height: 200px;
+    background: url(../../../assets/imagez/image.jpeg)no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+    border-radius: 8px;
+    color: white;
+    margin-left: -200px;
+    margin-top: -380px;
+}
+.right h1{
+    font-size: 40px;
+    font-weight: lighter;
+}
+.right p{
+    margin: 20px 0;
+    font-weight: 500;
+    line-height: 25px;
+}
+.right a{
+    text-decoration: none;
+    text-transform: uppercase;
+    background: white;
+    color: black;
+    padding: 20px 30px;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+@media only screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+        width: 100%;
+        margin: 0 20px;
+    }
+    .left{
+        width: 100%;
+        height: 400px;
+    }
+    .right{
+        width: 90%;
+        margin: 0;
+        margin-top: -100px;
+    }
+}

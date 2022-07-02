@@ -3,6 +3,7 @@
     height: 600px;
     object-position: center;
     object-fit: cover;
+    padding-bottom: 1rem;
 }
 .homecontent{
     position: absolute;
