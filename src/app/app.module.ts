@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { LoginComponent } from './login/login.component';
-import { DonorRegisterComponent } from './donor-register/donor-register.component';
-import { CharityRegisterComponent } from './charity-register/charity-register.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { LoginComponent } from './component/login/login.component';
+import { DonorRegisterComponent } from './component/donor-register/donor-register.component';
+import { CharityRegisterComponent } from './component/charity-register/charity-register.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
