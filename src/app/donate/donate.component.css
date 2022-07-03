@@ -1,0 +1,9 @@
+.banner{
+  background-image: url('/assets/images/contact-banner.jpg');
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 500px;
+
+}
