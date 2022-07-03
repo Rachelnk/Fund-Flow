@@ -1,9 +1,18 @@
 .banner{
-  background-image: url('/assets/images/contact-banner.jpg');
+  background-image: url('/assets/images/hands.jpg');
   background-repeat: no-repeat;
   background-position:center;
   background-size: cover;
   background-attachment: fixed;
   min-height: 500px;
+  
 
 } 
+.donate-heading{
+  padding-top:250px;
+  padding-left: 30px;
+  color: white;
+}
+.charities-section{
+  margin-top: 20px;
+}
