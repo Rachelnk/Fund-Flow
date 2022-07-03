@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { CharitiesComponent } from './charities/charities.component';
 import { DonateComponent } from './donate/donate.component';
+import { DonateFormComponent } from './donate-form/donate-form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DonateComponent } from './donate/donate.component';
     ContactComponent,
     ContactFormComponent,
     CharitiesComponent,
-    DonateComponent
+    DonateComponent,
+    DonateFormComponent
   ],
   imports: [
     BrowserModule,
