@@ -12,6 +12,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .left{
     width: 50%;
@@ -30,7 +31,7 @@ section{
     border-radius: 8px;
     color: white;
     margin-left: -200px;
-    margin-top: -380px;
+    margin-top: -420px;
 }
 .right h1{
     font-size: 40px;
@@ -41,7 +42,10 @@ section{
     font-weight: 500;
     line-height: 25px;
 }
-.right a{
+.content a{
+    color:black;
+}
+.btn{
     text-decoration: none;
     text-transform: uppercase;
     background: white;

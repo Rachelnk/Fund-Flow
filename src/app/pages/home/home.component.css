@@ -7,7 +7,7 @@
 }
 .homecontent{
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 20%;
     transform: translate(-50%,-50%);
 }
@@ -17,13 +17,29 @@
 }
 .homecontent a{
     margin-top: 10px;
+    letter-spacing: 4px;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+a:hover{
+    color: #255784;
+    background-color: #2196f3;
+    box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3,0 0 80px #2196f3;
 }
 
-.lowersupport{
-    width: 30%;
-    padding-left: 1rem;
+/* h1{
+    font-size: 60px;
+    color: #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: animate 3s infinite steps(21) alternate;
 }
-.support{
-    width:20% ;
-    height: 20;
-}
+@keyframes animate{
+    from{
+        width: 0;
+    }
+    to{
+        width: 750px;
+    }
+} */
