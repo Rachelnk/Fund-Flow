@@ -1,10 +1,22 @@
 section{
     min-height: 100vh;
-    width: 100;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fddcc356;
+    /* background-color: #fddcc356; */
+}
+h2{
+    color: black;
+}
+h3{
+    color: black;
+}
+p{
+    color: white;
+}
+span{
+    color: #0dcaf0;
 }
 .container{
     max-width: 1000px;
@@ -29,9 +41,9 @@ section{
     justify-content: center;
     padding:30px;
     border-radius: 8px;
-    color: white;
+    /* color: white; */
     margin-left: -200px;
-    margin-top: -420px;
+    margin-top: -300px;
 }
 .right h1{
     font-size: 40px;
@@ -48,7 +60,7 @@ section{
 .btn{
     text-decoration: none;
     text-transform: uppercase;
-    background: white;
+    background: #dee2e6;
     color: black;
     padding: 20px 30px;
     display: inline-block;

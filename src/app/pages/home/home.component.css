@@ -42,8 +42,28 @@
     transition: .5s;
     height: auto;
 }
+.card-title{
+    color: #ffffff;
+    text-align: center;
+}
 .container{
-    margin-top: -105px;
+    margin-top: -106px;
+}
+.lop{
+    padding-top: 3rem;
+}
+#two{
+    background-color:#dc3545;
+}
+#one{
+    background-color: #0dcaf0;
+}
+#three{
+    background-color:#ffc107;
+}
+.card-body{
+    text-align: center;
+    color: #ffffff;
 }
 /* h1{
     font-size: 60px;
