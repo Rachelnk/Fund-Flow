@@ -5,9 +5,13 @@
   background-size: cover;
   background-attachment: fixed;
   min-height: 500px;
-  
+}
 
-} 
+/* .charity-desc{
+  height:200px;
+
+} */
+
 .donate-heading{
   padding-top:250px;
   padding-left: 30px;
@@ -15,4 +19,7 @@
 }
 .charities-section{
   margin-top: 20px;
+}
+.charity-img {
+  border-radius: 50%;
 }
