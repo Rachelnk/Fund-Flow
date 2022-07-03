@@ -3,6 +3,13 @@
 } */
 .contact-page-heading {
   color: #59BBA4 ;
+}
+.submit-btn{
+
+  background-color: #59BBA4;
+  color: black;
+  border:none;
+  border-radius: 5px;
 
 
 }

@@ -1,14 +1,18 @@
-body{
+.banner{
   background-image: url('/assets/images/contact-banner.jpg');
   background-repeat: no-repeat;
   background-position:center;
   background-size: cover;
   background-attachment: fixed;
+  min-height: 500px;
 
 }
-/* .contact-heading {
-  color: #59BBA4 ;
-} */
+.contact-heading {
+  padding-top:250px;
+  padding-left: 30px;
+  color: white;
+}
+
 
 .contact-page-heading {
   color: #59BBA4 ;
@@ -17,4 +21,9 @@ body{
 #contact-section {
   margin-top: 20px;
   /* border-width:10px; */
+}
+.contact-info {
+  margin-top:10px;
+  margin-bottom: 50px;
+
 }
