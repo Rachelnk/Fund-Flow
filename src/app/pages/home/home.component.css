@@ -13,21 +13,38 @@
 }
 .homecontent h1{
     color: #ffffff;
-    font-size: 30px;
+    font-size: 25px;
 }
 .homecontent a{
     margin-top: 10px;
-    letter-spacing: 4px;
-    font-size: 24px;
-    overflow: hidden;
-    transition: 0.2s;
+    letter-spacing: 2px;
+    font-size: 20px;
 }
-a:hover{
-    color: #255784;
-    background-color: #2196f3;
-    box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3,0 0 80px #2196f3;
+.main-row{
+    margin-top: 10%;
 }
-
+.card{
+    cursor: pointer;
+}
+.card img{
+    transform:translateY(-50px);
+    border-radius: 15px;
+    z-index: 1;
+}
+.card .card-body{
+    visibility: hidden;
+    transform: translateY(-150px);
+    height: 0px;
+}
+.card:hover .card-body{
+    visibility: visible;
+    transform: translateY(-50px);
+    transition: .5s;
+    height: auto;
+}
+.container{
+    margin-top: -105px;
+}
 /* h1{
     font-size: 60px;
     color: #ffffff;
