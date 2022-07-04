@@ -4,7 +4,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DonateComponent } from './donate/donate.component';
 
 const routes: Routes = [
-  {path: 'donate', component: DonateComponent },
+  {path: '', component: DonateComponent },
   {path: 'contact', component: ContactComponent},
 ];
 
@@ -13,3 +13,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents =  [DonateComponent, ContactComponent]

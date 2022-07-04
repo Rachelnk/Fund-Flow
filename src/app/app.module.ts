@@ -8,6 +8,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { CharitiesComponent } from './charities/charities.component';
 import { DonateComponent } from './donate/donate.component';
 import { DonateFormComponent } from './donate-form/donate-form.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,10 @@ import { DonateFormComponent } from './donate-form/donate-form.component';
     DonateFormComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule,   
+    AppRoutingModule, 
+    RouterModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
