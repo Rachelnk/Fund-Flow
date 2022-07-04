@@ -28,13 +28,12 @@
 
 }
 
- .col-container, .row{
+ /* .col-container, .row{
   display: flex;
   width: 100%;
   flex-direction : row;
-}
+} */
 
-/* .card{
-  flex: 1;
-  padding: 16px;
-}  */
+.card{
+  height: 100%;
+} 
