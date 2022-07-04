@@ -4,11 +4,11 @@
   background-position:center;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 500px
+  min-height: 300px
 
 }
 .charity-heading{
-  padding-top:250px;
+  padding-top:150px;
   padding-left: 30px;
   color: white;
 }

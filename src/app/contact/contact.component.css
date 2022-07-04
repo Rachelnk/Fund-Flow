@@ -4,11 +4,11 @@
   background-position:center;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 500px;
+  min-height: 300px;
 
 }
 .contact-heading {
-  padding-top:250px;
+  padding-top:150px;
   padding-left: 30px;
   color: white;
 }
@@ -27,3 +27,14 @@
   margin-bottom: 50px;
 
 }
+
+ .col-container, .row{
+  display: flex;
+  width: 100%;
+  flex-direction : row;
+}
+
+/* .card{
+  flex: 1;
+  padding: 16px;
+}  */
