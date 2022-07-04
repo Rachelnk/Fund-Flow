@@ -12,27 +12,7 @@
   padding-left: 30px;
   color: white;
 }
-.mission{
-  font-size:20px;
-  /* background-color:#ed5f46; */
-  margin: 0 -0.4em;
-  padding: 0.1em 0.4em;
-  border-radius: 0.8em 0.3em;
-  background: transparent;
-  background-image: linear-gradient(
-    to right,
-    /* rgba(237, 95, 70, 0.1),
-    rgba(237, 95, 70, 0.7) 4%,
-    rgba(237, 95, 70, 0.3),  */
-    rgba(239, 201, 76, 0.1),
-    rgba(239, 201, 76, 0.7) 4%,
-    rgba(239, 201, 76, 0.3)
-  );
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
 
-
-}
 .more-details-btn{
   float:left;
   background-color: #59BBA4;
@@ -42,7 +22,7 @@
 }
 
 .charities-section {
-    margin-top: 20px;
+    margin-top: 30px;
 
 }
 
