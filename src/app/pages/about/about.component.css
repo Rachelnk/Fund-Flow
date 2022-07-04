@@ -7,16 +7,16 @@ section{
     /* background-color: #fddcc356; */
 }
 h2{
-    color: black;
+    color: #efc94c;
 }
 h3{
-    color: black;
+    color: #efc94c;
 }
 p{
     color: white;
 }
 span{
-    color: #0dcaf0;
+    color: #59bba4;
 }
 .container{
     max-width: 1000px;
@@ -35,7 +35,7 @@ span{
 .right{
     width: 50%;
     min-height: 200px;
-    background: url(../../../assets/imagez/image.jpeg)no-repeat center/cover;
+    background: url(../../../assets/imagez/pexels-spencer-selover-428333.jpg)no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,8 +60,8 @@ span{
 .btn{
     text-decoration: none;
     text-transform: uppercase;
-    background: gray;
-    color: black;
+    background:#59bba4;
+    color: white;
     padding: 20px 30px;
     display: inline-block;
     letter-spacing: 2px;
