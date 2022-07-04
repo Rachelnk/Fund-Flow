@@ -4,7 +4,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DonateComponent } from './donate/donate.component';
 
 const routes: Routes = [
-  {path: '', component: DonateComponent },
+  {path: 'donate', component: DonateComponent },
   {path: 'contact', component: ContactComponent},
 ];
 
