@@ -37,3 +37,7 @@
 .card{
   height: 100%;
 } 
+#card-email:hover{
+  background-color: #ed5f467c;
+
+}
