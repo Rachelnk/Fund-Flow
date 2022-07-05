@@ -9,6 +9,7 @@ import { CharitiesComponent } from './charities/charities.component';
 import { DonateComponent } from './donate/donate.component';
 import { DonateFormComponent } from './donate-form/donate-form.component';
 import { RouterModule } from '@angular/router';
+import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
     ContactFormComponent,
     CharitiesComponent,
     DonateComponent,
-    DonateFormComponent
+    DonateFormComponent,
+    CharityDashboardComponent
   ],
   imports: [
     BrowserModule,   
