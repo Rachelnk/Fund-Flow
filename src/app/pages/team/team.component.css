@@ -3,12 +3,14 @@
 }
 h1 {
   text-align: center;
-  color:#ed5e46;
+  color: #ed5e46;
+  font-family: Merienda;
 }
-.para{
-    text-align: center;
-    font-size: 1rem;
-    color: #59bba4;
+.para {
+  text-align: center;
+  font-size: 1rem;
+  color: #59bba4;
+  font-family: Roboto;
 }
 .single-team {
   padding-bottom: 70px;
@@ -61,6 +63,7 @@ h1 {
 .team-text {
   color: #fff;
   padding: 0 10px 5px;
+  font-family: Roboto;
 }
 .single-team:hover .team-img img {
   transform: scale(1.1);

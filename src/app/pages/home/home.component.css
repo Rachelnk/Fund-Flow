@@ -12,7 +12,7 @@
     transform: translate(-50%,-50%);
 }
 .homecontent h3{
-    color: #ffffff;
+    color:white;
     font-size: 25px;
 }
 .homecontent a{
@@ -48,9 +48,6 @@
 }
 h5{
     color: #ed5e46;
-}
-img{
-    opacity: 0.7;
 }
 .container .box .icon{
     position: relative;
@@ -104,6 +101,12 @@ img{
 .container .box .content p{
     margin: 0;
     padding: 0;
+}
+h6{
+    padding-top:0.5rem;
+}
+.news{
+    padding: 0.5rem;
 }
 a{
     display: inline-block;
