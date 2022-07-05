@@ -83,3 +83,19 @@ h1 {
     margin-bottom: 30px;
   }
 }
+/* h1{
+    font-size: 60px;
+    color:black;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: animate 3s infinite steps(21) alternate;
+}
+@keyframes animate{
+    from{
+        width: 0;
+    }
+    to{
+        width: 750px;
+    }
+} */
