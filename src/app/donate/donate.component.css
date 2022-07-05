@@ -4,15 +4,11 @@
   background-position:center;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 300px;
+  min-height: 400px;
 }
 .row {
   display: flex;
 }
-/* .charity-desc{
-  height:200px;
-
-} */
 
 .donate-heading{
   padding-top: 150px;
