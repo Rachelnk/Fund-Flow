@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
-      <div class="">
-        <div class="col-md-6">
-          <h2 class="text-center">Add more details about your charity.</h2>
+      
+        <div class="col-md-5">
+          <h2 class="text-center" style="margin-bottom:20px">Add more details about charity.</h2>
           <form action="">
             <div class="row">
               <div class="col-md-6">
@@ -13,24 +13,29 @@
 
               </div>
               <div class="col-md-6">
-                <label for="date-created">Date Created</label>
-                <input type="date" class="form-control" id="date-created" required placeholder="Date Created">
+                <div class="form-group">
+                  <label for="date-created">Date Created</label>
+                  <input type="date" class="form-control" id="date-created" required placeholder="Date Created">  
 
+                </div>
+               
               </div>
             </div>
 
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <label for="Amount">Amount </label>
                 <input type="number" id="amount" class="form-control" placeholder="Amount To be Raised">
 
               </div>
-              <div class="col-md-6">
+            </div>
+            <div class="row">           
+              <div class="col-md-12">
                 <label for="deadline">Deadline</label>
                 <input type="date" id="deadline" class="form-control" required>
 
-              </div>
-              <div class="col-md-12">
+            </div>
+              <div class="col-md-12" style="margin-top:16px;">
                 <label for="about">Charity Description</label>
                 <textarea name="about-charity" id="about-charity" cols="10" rows="5" class="form-control"></textarea>
               </div>
@@ -39,26 +44,27 @@
               </div>
             </div>           
           </form>
-        </div>        
-      </div>
+        </div>  
+        <div class="col-md-2"></div>      
+      
 
       <!-- Edit form -->
 
-      <div class="" style="float: right;">
-        <div class="col-md-6">
-          <h2 class="text-center">Edit Charity Details</h2>
+      
+        <div class="col-md-5">
+          <h2 class="text-center" style="margin-bottom:20px">Edit Charity Details</h2>
           <form action="">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6" style="margin-top:70px ;">
                 <div class="form-group">
-                  <img src="/assets/images/contact-banner.jpg" alt="charity-logo" style="margin:50% ;" height="80" width="80">
-                  <input type="image" required id="image">
+                  <input type="file" required id="image">
 
                 </div>
 
               </div>
+            <div class="col-md-6">
               <div class="row">                
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <div class="form-group">
                     <label for="charity-name">Charity Name</label>
                     <input type="text" placeholder="Charity Name" id="charity-name" required class="form-control">
@@ -66,7 +72,7 @@
                 </div>
               </div>
               <div class="row">                
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <div class="form-group">
                     <label for="date-created">Date Created</label>
                     <input type="date" class="form-control" id="date-created" required placeholder="Date Created">   
@@ -74,6 +80,7 @@
                   </div>                 
                 </div>
               </div>
+            </div>
               
             </div>
 
@@ -88,12 +95,12 @@
                 <input type="date" id="deadline" class="form-control" required>
 
               </div>
-              <div class="col-md-12">
+              <div class="col-md-12" style="margin-top: 35px;">
                 <label for="about">Charity Description</label>
                 <textarea name="about-charity" id="about-charity" cols="10" rows="5" class="form-control"></textarea>
               </div>
               <div class="col-md-12">
-                <button class="add-edit-btn form-control">Add</button>
+                <button class="add-edit-btn form-control">Edit</button>
               </div>
             </div>
 
@@ -103,7 +110,7 @@
 
         </div>
         
-      </div>
+      
   </div>
   
 
