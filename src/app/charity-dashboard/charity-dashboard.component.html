@@ -1,14 +1,14 @@
 <h1 class="text-center">Water Fundraiser Dashboard</h1>
 
 <!-- Tab links -->
-<div class="tab" style="margin-top:20px ; margin-bottom: 20px; background-color: #59BBA4;">
-  <button class="tablinks text-center" onclick="openSection(event, 'home')" id="defaultOpen"><span style="font-size:20px ;">Home</span> </button>
-  <button class="tablinks text-center" onclick="openSection(event, 'beneficiaries')"><span style="font-size:20px ; ">Beneficiaries</span> </button>    
+<div class="tab-dashboard" style="margin-top:20px ; margin-bottom: 20px; background-color: #59BBA4;">
+  <button class="tablinks text-center" onclick="openSection(event, 'Home')" id="defaultOpen"><span style="font-size:20px ;">Home</span> </button>
+  <button class="tablinks text-center" onclick="openSection(event, 'Beneficiaries')"><span style="font-size:20px ; ">Beneficiaries</span> </button>    
       
 </div>
 <!-- Home tab -->
 <div class="container">
-<div class="tabcontent" id="home">
+<div id="Home" class="tabcontent">
   <div class="col-md-12">
     <div class="row">
       <app-charitydetails-form></app-charitydetails-form>
@@ -18,7 +18,7 @@
     <!-- Donor's table and amount raised -->
     <div class="row" style="margin-top:30px ;">      
       <div class="col-md-9">
-        <h2 class="text-center">Donation Details</h2>
+        <h2 class="">Donation Details</h2>
         <table>
           <tr>
             <th>Donor</th>
@@ -43,9 +43,10 @@
 
         </table>
       </div>
-      <div class="row">
+      <div class="col-md-3">
         <h2>Amount Raised</h2>
         <p style="font-family: 'Secular One', sans-serif;"> <span style="color: #ED5E46; font-size: 30px;">KSH 35,000</span><span style="font-size: 25px ;"> of 200,000 raised</span>  </p>            
+        <p style="font-family: 'Secular One', sans-serif; font-size: 25px;">17.5% raised</p>
 
 
       </div>
@@ -59,12 +60,13 @@
 </div>
 
     <!-- Beneficiaries -->
-    <div class="tabcontent" id="beneficiaries">
+    <div class="tabcontent" id="Beneficiaries">
+      <div class="row">
+        <app-beneficiary-form></app-beneficiary-form>
+      </div>
 
     </div>
-    <div class="row">
-      <app-beneficiary-form></app-beneficiary-form>
-    </div>
+    
 </div>
 
 <script>
@@ -90,4 +92,4 @@
   }
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
-  </script>
+</script>

@@ -1,37 +1,37 @@
-/* Style the tab */
-/* .tab {
+/* Style the tab-dashboard */
+.tab-dashboard {
   overflow: hidden;
-} */
+  /* border: 1px solid #ccc; */
+  /* background-color: #f1f1f1; */
+}
 
-/* Style the buttons that are used to open the tab content */
-/* .tab button {
+/* Style the buttons that are used to open the tab-dashboard content */
+.tab-dashboard button {
   background-color: inherit;
-  text-align: center; */
-  /* float: left; */
-  /* border: none;
+  text-align: center;
+  border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-} */
+}
 
 /* Change background color of buttons on hover */
-/* .tab button:hover {
+.tab-dashboard button:hover {
   background-color: #ddd;
-} */
+}
 
 /* Create an active/current tablink class */
-/* .tab button.active {
+.tab-dashboard button.active {
   background-color: #ccc;
-} */
+}
 
-/* Style the tab content */
-/* .tabcontent {
+/* Style the tab-dashboard content */
+.tabcontent {
   display: none;
-  padding: 6px 12px; */
-  /* border: 1px solid #ccc; */
-  /* border-top: none;
-} */
+  padding: 6px 12px;
+  border-top: none;
+}
 
 table, th, td {
   border:1px solid black;
