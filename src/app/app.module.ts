@@ -11,6 +11,7 @@ import { DonateFormComponent } from './donate-form/donate-form.component';
 import { RouterModule } from '@angular/router';
 import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component';
 import { CharitydetailsFormComponent } from './charitydetails-form/charitydetails-form.component';
+import { BeneficiaryFormComponent } from './beneficiary-form/beneficiary-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CharitydetailsFormComponent } from './charitydetails-form/charitydetail
     DonateComponent,
     DonateFormComponent,
     CharityDashboardComponent,
-    CharitydetailsFormComponent
+    CharitydetailsFormComponent,
+    BeneficiaryFormComponent
   ],
   imports: [
     BrowserModule,   
