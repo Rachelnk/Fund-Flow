@@ -1,32 +1,36 @@
-<div class="container">
-    <h1>Donor Board</h1>
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="../../../assets/imagez/pexels-anthony-chinweuba-2330118.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Donor</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+<section>
+  <div class="container">
+    <h1 class="text-center">Donor</h1>
+    <div class="card" style="width: 18rem;">
+      <img src="../../../assets/imagez/pexels-anthony-chinweuba-2330118.jpg" class="card-img-top" alt="...">
+    </div>
+    <form>
+      <div class="row mb-3 pt-2">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Donor Full Name</label>
+        <div class="col-sm-10">
+          <input type="name" class="form-control" id="inputFullName">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Donor Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputEmail">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Donor Number</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="inputPhoneNumber">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputAbout" class="col-sm-2 col-form-label">About</label>
+        <div class="col-sm-10">
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="About donor" id="floatingTextarea2" style="height: 100px"></textarea>
           </div>
         </div>
       </div>
-      <div class="row g-3">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-        </div>
-        <div class="col">
-            <input type="text" class="form-control" placeholder="Charity" aria-label="Charity name">
-          </div>
-      </div>
-      <div class="input-group mb-3 pt-2">
-        <span class="input-group-text">Ksh</span>
-        <span class="input-group-text">0.00</span>
-        <input type="text" class="form-control" aria-label="Shilling amount (with dot and two decimal places)">
-      </div>
-</div>
+    </form>
+  </div>  
+</section>
