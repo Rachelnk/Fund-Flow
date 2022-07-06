@@ -12,6 +12,8 @@ import { RouterModule } from '@angular/router';
 import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component';
 import { CharitydetailsFormComponent } from './charitydetails-form/charitydetails-form.component';
 import { BeneficiaryFormComponent } from './beneficiary-form/beneficiary-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs'
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BeneficiaryFormComponent } from './beneficiary-form/beneficiary-form.co
   imports: [
     BrowserModule,   
     AppRoutingModule, 
-    RouterModule,
+    RouterModule, 
+    BrowserAnimationsModule,
+    MatTabsModule
     
   ],
   providers: [],
