@@ -29,6 +29,7 @@
     font-weight: 300;
     text-align: center;
     margin-bottom: 80px;
+    color: #59bba4;
 
 }
 .card{
@@ -55,11 +56,14 @@
     font-size: 16px;
     margin-top: 40px;
     margin-bottom: 25px;
+    color:  #59bba4;
 }
 .card h2{
     font-weight: 500;
     margin-bottom: 4px;
     font-family: Merienda,cursive;
+    font-size:1.5rem;
+    text-transform: uppercase;
 }
 .card h4{
     color: #333;

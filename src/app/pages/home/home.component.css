@@ -20,6 +20,11 @@
     letter-spacing: 2px;
     font-size: 20px;
     color: #000;
+    text-align: center;
+}
+.content img{
+    width: 20%;
+    padding-top: 1rem;
 }
 .container{
     display: flex;
