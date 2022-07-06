@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-donor-register',
@@ -22,7 +23,7 @@ export class DonorRegisterComponent implements OnInit {
   isSignUpFailed = false;
   errorMessage = '';
   
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -34,6 +35,7 @@ export class DonorRegisterComponent implements OnInit {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
+        this.router.navigate(["/login"])
       },
       err => {
         this.errorMessage = err.error.message;

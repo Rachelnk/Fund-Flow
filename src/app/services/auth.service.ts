@@ -31,4 +31,26 @@ export class AuthService {
 
     }, httpOptions);
   }
+
+  registerCharity(username: string, email:string, password1: string,password2:string):Observable<any> {
+    return this.http.post(AUTH_API + 'signup-charity/', {
+      username,
+      email,
+      password1,
+      password2,
+
+    }, httpOptions);
+  }
+
+  registerAdmin(username: string, email:string,last_name:string,first_name:string,password1: string,password2:string):Observable<any> {
+    return this.http.post(AUTH_API + 'signup-admin/', {
+      username,
+      email,
+      last_name,
+      first_name,
+      password1,
+      password2,
+
+    }, httpOptions);
+  }
 }
