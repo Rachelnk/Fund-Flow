@@ -10,6 +10,7 @@ import { DonateComponent } from './donate/donate.component';
 import { DonateFormComponent } from './donate-form/donate-form.component';
 import { RouterModule } from '@angular/router';
 import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component';
+import { CharitydetailsFormComponent } from './charitydetails-form/charitydetails-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard
     CharitiesComponent,
     DonateComponent,
     DonateFormComponent,
-    CharityDashboardComponent
+    CharityDashboardComponent,
+    CharitydetailsFormComponent
   ],
   imports: [
     BrowserModule,   

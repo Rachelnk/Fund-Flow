@@ -1,17 +1,48 @@
 <h1 class="text-center">Water Fundraiser Dashboard</h1>
 
 <!-- Tab links -->
-<div class="tab" style="margin-top:20px ; margin-bottom: 20px;">
+<div class="tab" style="margin-top:20px ; margin-bottom: 20px; background-color: #59BBA4;">
   <button class="tablinks text-center" onclick="openSection(event, 'home')" id="defaultOpen"><span style="font-size:20px ;">Home</span> </button>
-  <button class="tablinks text-center" onclick="openSection(event, 'beneficiaries')"><span style="font-size:20px ;">Beneficiaries</span> </button>    
+  <button class="tablinks text-center" onclick="openSection(event, 'beneficiaries')"><span style="font-size:20px ; ">Beneficiaries</span> </button>    
       
 </div>
 <!-- Home tab -->
-<div class="home">
+<div class="tabcontent" id="home">
+  <div class="col-md-12">
+    <h1>Testing</h1>
+    
+    
+  </div>
+  
 
 </div>
 
 <!-- Beneficiaries -->
-<div class="beneficiaries">
+<div class="tabcontent" id="beneficiaries">
 
 </div>
+
+<script>
+  function openSection(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;    
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
