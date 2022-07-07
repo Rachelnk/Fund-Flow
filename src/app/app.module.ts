@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
+import { authInterceptorProviders } from './helpers/auth.interceptors';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
@@ -19,6 +21,13 @@ import { AboutComponent } from './pages/about/about.component';
 import { TeamComponent } from './pages/team/team.component';
 import { TestimonialComponent } from './pages/testimonial/testimonial.component';
 import { DonorDashboardComponent } from './pages/donor-dashboard/donor-dashboard.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { LoginComponent } from './component/login/login.component';
+import { DonorRegisterComponent } from './component/donor-register/donor-register.component';
+import { CharityRegisterComponent } from './component/charity-register/charity-register.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { CharityFormComponent } from './component/charity-form/charity-form.component';
+import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
 
 @NgModule({
   declarations: [
@@ -35,17 +44,31 @@ import { DonorDashboardComponent } from './pages/donor-dashboard/donor-dashboard
     AboutComponent,
     TeamComponent,
     TestimonialComponent,
-    DonorDashboardComponent
+    DonorDashboardComponent,
+    LoginComponent,
+    NavbarComponent,
+    AdminRegisterComponent,
+    FooterComponent,
+    DonorRegisterComponent,
+    CharityRegisterComponent,
+    CharityFormComponent,
   ],
   imports: [
     BrowserModule,   
     AppRoutingModule, 
     RouterModule, 
     BrowserAnimationsModule,
-    MatTabsModule
-    
+    MatTabsModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  // imports: [
+  //   BrowserModule,
+  //   AppRoutingModule,
+  //   HttpClientModule,
+  //   FormsModule
+  // ],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

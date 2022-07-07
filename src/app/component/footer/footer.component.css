@@ -1,0 +1,37 @@
+
+footer {
+    margin-top: 50vh;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    padding-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer {
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.footer .copyright {
+    text-align: center;
+    padding-top: 30px
+}
+
+.footer .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.credits a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Whisper', cursive;   
+    font-size: 40px;
+
+}
+
+

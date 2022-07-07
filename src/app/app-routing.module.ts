@@ -8,6 +8,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { TeamComponent } from './pages/team/team.component';
 import { TestimonialComponent } from './pages/testimonial/testimonial.component';
 import { CharitiesComponent } from './charities/charities.component';
+import { LoginComponent } from './component/login/login.component';
+import { CharityRegisterComponent } from './component/charity-register/charity-register.component';
+import { DonorRegisterComponent } from './component/donor-register/donor-register.component';
+import { CharityFormComponent } from './component/charity-form/charity-form.component';
+import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
+import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component'
 // import { MoreComponent } from './pages/more/more.component';
 
 const routes: Routes = [
@@ -19,7 +25,13 @@ const routes: Routes = [
   {path:'testimonial',component:TestimonialComponent},
   {path:'donor-dashboard',component:DonorDashboardComponent},
   {path: 'charities', component:CharitiesComponent},
-  // {path: 'more', component:MoreComponent},
+
+  {path: 'login', component:LoginComponent},
+  {path: 'charity-register', component:CharityRegisterComponent},
+  {path: 'donor-register',component:DonorRegisterComponent},
+  {path: 'charity-form',component:CharityFormComponent},
+  {path: 'admin-register',component:AdminRegisterComponent},
+  {path: 'charity-dashboard', component:CharityDashboardComponent},
 ];
 
 
@@ -32,9 +44,19 @@ const routes: Routes = [
 //   {path:'donor-dashboard',component:DonorDashboardComponent}
 // ];
 
+
+// const routes: Routes = [
+//   {path: 'login', component:LoginComponent},
+//   {path: 'charity-register', component:CharityRegisterComponent},
+//   {path: 'donor-register',component:DonorRegisterComponent},
+//   {path: 'charity-form',component:CharityFormComponent},
+//   {path: 'admin-register',component:AdminRegisterComponent},
+// ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
 // export const routingComponents =  [DonateComponent, ContactComponent]
+export const routingComponents = [ LoginComponent, CharityRegisterComponent, DonorRegisterComponent, CharityFormComponent, AdminRegisterComponent]
