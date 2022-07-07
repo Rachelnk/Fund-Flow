@@ -57,6 +57,10 @@ span{
 .content a{
     color:white;
 }
+h1{
+    color: #ed5e46;
+    font-family: Merienda,cursive;
+}
 .btn{
     text-decoration: none;
     text-transform: uppercase;

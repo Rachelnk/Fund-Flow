@@ -5,6 +5,7 @@ import { DonateComponent } from './donate/donate.component';
 import { AboutComponent } from './pages/about/about.component';
 import { DonorDashboardComponent } from './pages/donor-dashboard/donor-dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
+import { MoreComponent } from './pages/more/more.component';
 import { TeamComponent } from './pages/team/team.component';
 import { TestimonialComponent } from './pages/testimonial/testimonial.component';
 import { CharitiesComponent } from './charities/charities.component';
@@ -25,13 +26,13 @@ const routes: Routes = [
   {path:'testimonial',component:TestimonialComponent},
   {path:'donor-dashboard',component:DonorDashboardComponent},
   {path: 'charities', component:CharitiesComponent},
-
   {path: 'login', component:LoginComponent},
   {path: 'charity-register', component:CharityRegisterComponent},
   {path: 'donor-register',component:DonorRegisterComponent},
   {path: 'charity-form',component:CharityFormComponent},
   {path: 'admin-register',component:AdminRegisterComponent},
   {path: 'charity-dashboard', component:CharityDashboardComponent},
+  {path:'more',component:MoreComponent}
 ];
 
 

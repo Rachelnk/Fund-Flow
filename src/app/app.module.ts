@@ -28,6 +28,7 @@ import { CharityRegisterComponent } from './component/charity-register/charity-r
 import { FooterComponent } from './component/footer/footer.component';
 import { CharityFormComponent } from './component/charity-form/charity-form.component';
 import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
+import { MoreComponent } from './pages/more/more.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { AdminRegisterComponent } from './component/admin-register/admin-registe
     DonorRegisterComponent,
     CharityRegisterComponent,
     CharityFormComponent,
+    MoreComponent
   ],
   imports: [
     BrowserModule,   
