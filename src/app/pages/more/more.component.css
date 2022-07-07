@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+    color: #ed5e46;
+    font-family: Merienda,cursive;
+    padding-top: 2rem;
+    font-size: 2.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: animate 3s infinite steps(21) alternate;
+}
+@keyframes animate{
+    from{
+        width: 0;
+    }
+    to{
+        width: 750px;
+    }
+}

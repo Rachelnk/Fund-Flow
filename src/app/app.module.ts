@@ -8,6 +8,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { TeamComponent } from './pages/team/team.component';
 import { TestimonialComponent } from './pages/testimonial/testimonial.component';
 import { DonorDashboardComponent } from './pages/donor-dashboard/donor-dashboard.component';
+import { MoreComponent } from './pages/more/more.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DonorDashboardComponent } from './pages/donor-dashboard/donor-dashboard
     AboutComponent,
     TeamComponent,
     TestimonialComponent,
-    DonorDashboardComponent
+    DonorDashboardComponent,
+    MoreComponent
   ],
   imports: [
     BrowserModule,
