@@ -5,6 +5,7 @@ import { CharityRegisterComponent } from './component/charity-register/charity-r
 import { DonorRegisterComponent } from './component/donor-register/donor-register.component';
 import { CharityFormComponent } from './component/charity-form/charity-form.component';
 import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
+import { AdminDashComponent } from './component/admin-dash/admin-dash.component';
 
 const routes: Routes = [
   {path: 'login', component:LoginComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'donor-register',component:DonorRegisterComponent},
   {path: 'charity-form',component:CharityFormComponent},
   {path: 'admin-register',component:AdminRegisterComponent},
+  {path: 'admin-dash',component:AdminDashComponent},
 ];
 
 @NgModule({
@@ -19,4 +21,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ LoginComponent, CharityRegisterComponent, DonorRegisterComponent, CharityFormComponent, AdminRegisterComponent]
+export const routingComponents = [ LoginComponent, CharityRegisterComponent, DonorRegisterComponent, CharityFormComponent, AdminRegisterComponent, AdminDashComponent]

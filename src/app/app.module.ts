@@ -12,6 +12,7 @@ import { CharityRegisterComponent } from './component/charity-register/charity-r
 import { FooterComponent } from './component/footer/footer.component';
 import { CharityFormComponent } from './component/charity-form/charity-form.component';
 import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
+import { AdminDashComponent } from './component/admin-dash/admin-dash.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AdminRegisterComponent } from './component/admin-register/admin-registe
     CharityRegisterComponent,
     FooterComponent,
     CharityFormComponent,
-    AdminRegisterComponent
+    AdminRegisterComponent,
+    AdminDashComponent
   ],
   imports: [
     BrowserModule,

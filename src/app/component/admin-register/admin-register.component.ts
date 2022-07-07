@@ -36,7 +36,7 @@ export class AdminRegisterComponent implements OnInit {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
-        this.router.navigate(["/login"])
+        this.router.navigate(["/admin-dash"])
       },
       err => {
         this.errorMessage = err.error.message;
