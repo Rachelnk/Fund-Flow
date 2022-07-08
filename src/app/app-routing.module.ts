@@ -18,7 +18,7 @@ import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard
 // import { MoreComponent } from './pages/more/more.component';
 
 const routes: Routes = [
-  {path: 'donate', component: DonateComponent },
+  {path: 'charities/donate/:id', component: DonateComponent },
   {path: 'contact', component: ContactComponent},
   {path:'',component:HomeComponent},
   {path:'about',component:AboutComponent},

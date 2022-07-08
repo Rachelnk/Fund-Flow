@@ -6,9 +6,10 @@
     color: black;
 }
 .nav-item a{
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 15px;
+    /* font-weight: bold; */
     color: black;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 .navbar-brand{
     font-size: 30px;
