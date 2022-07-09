@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.tokenStorage.getToken())
-        this.isLoggedIn = false
+        this.isLoggedIn = false;
 
   }
   onSubmit(): void {
@@ -30,14 +30,24 @@ export class LoginComponent implements OnInit {
     this.authService.login(username, password).subscribe(
       data => {
         console.log(data);
+        this.tokenStorage.saveToken(data.token);
+        this.tokenStorage.saveUser(data);
         this.isLoggedIn = true;
         this.isLoginFailed = false;
-        this.router.navigate(["/charity-form"])
+        this.router.navigate(["/charity-form"]).then(() => {
+          window.location.reload();
+        });        
+        
+        alert(data.response_msg)
+        console.log(data)
+        
       },
       err => {
         this.errorMessage = err.error.message;
         this.isLoginFailed = true
       });
   }
+
+
 
 }

@@ -39,6 +39,7 @@ export class DonorRegisterComponent implements OnInit {
       },
       err => {
         this.errorMessage = err.error.message;
+        alert(err)
         this.isSignUpFailed = true
       });
   }

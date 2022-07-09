@@ -25,6 +25,7 @@ export class ContactFormComponent implements OnInit {
   constructor(public contactService: ContactService,public router:Router,private httpClient:HttpClient) { }
   
   ngOnInit(): void {
+    
   }
   onSubmit(data:any): void {
     const {name, email, phone_number,subject,message} = this.form;
@@ -38,5 +39,8 @@ export class ContactFormComponent implements OnInit {
         this.errorMessage = err.error.message;
       });
 
+}
+reloadPage(): void {
+  window.location.reload();
 }
 }
