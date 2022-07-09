@@ -30,6 +30,7 @@ import { CharityFormComponent } from './component/charity-form/charity-form.comp
 import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
 import { MoreComponent } from './pages/more/more.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
