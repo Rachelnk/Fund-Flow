@@ -1,48 +1,110 @@
 <h2 id="" class="contact-page-heading">Donate Now</h2>
   <hr>
-  <div class="donate-form" style="margin-top: 15px; margin-bottom: 15px;">
-    <form action="">
-      <div class="row">
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Donate Now"> 
+    <div class="donate-form" style="margin-top: 15px; margin-bottom: 15px;">
+      <form action="">
         
-        <!-- full name -->
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="firstname">First Name</label>
-              <input type="text" class="form-control" id="first-name" required placeholder="First Name">
+        <div class="row">
+          
+          <!-- full name -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="first-name" required placeholder="First Name">
+              </div>
             </div>
-          </div>
-          <!-- email field -->
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="lastname">Last Name</label>
-              <input type="text" class="form-control" id="last-name" placeholder="Last Name" required>
+            <!-- email field -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="last-name" placeholder="Last Name" required>
+              </div>
             </div>
-          </div>
 
-      </div>     
-      
-      <div class="row">
-      
-        <!-- email field -->
+        </div>     
+        
+        <div class="row">
+        
+          <!-- email field -->
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="Email" required>
+              </div>
+            </div>      
+
+        </div> 
+        <div class="row">
+          <!-- Phone number field -->
           <div class="col-md-12">
             <div class="form-group">
-              <label for="Email">Email</label>
-              <input type="text" class="form-control" id="email" placeholder="Email" required>
+              <label for="phone-number">Phone Number</label>
+              <input type="number" class="form-control" id="phone-number" required placeholder="Phone Number">
             </div>
-          </div>      
-
-      </div> 
-      <div class="row">
-        <!-- Phone number field -->
-        <div class="col-md-12">
-          <div class="form-group">
-            <label for="phone-number">Phone Number</label>
-            <input type="number" class="form-control" id="phone-number" required placeholder="Phone Number">
           </div>
         </div>
-      </div>
+        <div class="row">
+        
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="comment">Comment</label>
+              <textarea id="comment" class="form-control" rows="4" required placeholder="Comment"></textarea>
+            </div>
+        </div>
+
+        </div>
+        <div class="row">
+          <!-- Phone number field -->
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="donation-amount">Donation Amount</label>
+              <input type="number" class="form-control" id="donation-amount" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+        
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="donation-frequency">Donation Frequency</label><br>
+              <select name="frequency" id="frequency" class="form-control">
+                <option value="once">Once</option>
+                <option value="monthly">Monthly</option>
+                <option value="annually">Annually</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+        
+          <div class="col-md-12">
+
+            <div style="margin-bottom:20px">
+              <label for="payment-method">Payment Method</label> <br>
+              <button class="payment-method-btn" style="width:120px;">PayPal</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+        
+          <div class="col-md-12">
+            <div>
+              <button class="donate-btn form-control" >Donate Now</button>
+            </div>
+          </div>
+        </div>
+          
+      </form>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Donate Anonymously">
+    <form action="
+    ">
+    <div class="donate-form" style="margin-top: 15px; margin-bottom: 15px;">
       <div class="row">
-      
+        
         <div class="col-md-12">
           <div class="form-group">
             <label for="comment">Comment</label>
@@ -91,6 +153,9 @@
           </div>
         </div>
       </div>
-        
-    </form>
-  </div>
+    
+    </div>
+  </form>
+
+  </mat-tab>
+</mat-tab-group>
