@@ -1,33 +1,34 @@
 <div class="">
   <!-- *ngFor="let charity of charities" -->
-  <div class="">
-    <div class="banner" >
+  <div class="" >
+    <div class="banner"  >
       <!--  -->
       
-      <h1 class="donate-heading"><span class="mission"> Our mission: Lorem ipsum dolor sit amet</span> <br>
-       Water Fundraiser </h1>
+      <h1 class="donate-heading"><span class="mission"> Our mission: {{charity.mission}}</span> <br>
+      {{charity.name}}</h1>
     </div>
     <div class="container"> 
       <div class="charities-section">
         <div class="row">
           <div class="col-md-8">
             <div class="card charity-desc" style="margin-bottom: 30px; border-radius: 3px;">
-              <img src="/assets/images/water.jpg" class="card-img-top" style="border-radius: 3px 3px 0px 0px; object-fit: cover;" alt="Charity Image" height="400"  >
+              <img src="https://res.cloudinary.com/dtqnkzj6q/{{charity.charity_image}}" class="card-img-top" style="border-radius: 3px 3px 0px 0px; object-fit: cover;" alt="Charity Image" height="400"  >
               <div class="card-body">
-                <h5 class="card-title"> Water Fundraiser</h5> 
-                <p style="font-family: 'Secular One', sans-serif;"> <span style="color: #ED5E46; font-size: 30px;">KSH 20000</span><span style="font-size: 25px ;"> of 200,000 raised</span>  </p>            
+                <h5 class="card-title">{{charity.name}}</h5> 
+                <p style="font-family: 'Secular One', sans-serif;"> <span style="color: #ED5E46; font-size: 30px;">KSH 20000</span><span style="font-size: 25px ;"> of {{charity.target_amount}} raised</span>  </p>            
 
               </div>
 
             </div>
 
           </div>
+
           <div class="col-md-4">
             <div class="card" style="margin-bottom: 30px; ">          
               <div class="card-body">
                 <h5 class="card-title">Our Purpose</h5>
                 <hr>
-                <p>We're here to help charities change the world, so our global fundraising service is free. We cover our costs by taking a 5% donation fee which donors can cover</p>
+                <p>{{charity.description}}</p>
               </div>
 
             </div>
@@ -40,20 +41,20 @@
       <div class="donate-form">
         <div class="row">
           <div class="col-md-8">
-            <!-- <app-donate-form></app-donate-form> -->
+              <!-- app-form-selector -->
+            <app-donate-form></app-donate-form>
 
           </div>
-          <div class="col-md-4" style="margin-bottom: 30px;">
+          <div class="col-md-4" style="margin-bottom: 30px;" *ngIf="beneficiaries">
             <div class="card" style="margin-bottom: 30px; border-radius: 3px;">          
               <div class="card-body">
-                <h5 class="card-title">Beneficiary List</h5>
+                <h5 class="card-title" >Beneficiaries</h5>
                 <hr>
                 <div class="row">
                   
-                  <div class="col-md-6" style="margin-top:10px;">
+                  <div class="col-md-7" style="margin-top:10px;">
                     <ul style="font-family:monospace;">
-                      <li >Jane Doe</li>
-                      <li>Jane Doe</li>
+                      <li *ngFor="let beneficiary of beneficiaries">{{beneficiary.name}}</li>
                       
                     </ul>
                     

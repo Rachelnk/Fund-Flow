@@ -9,7 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { CharitiesComponent } from './charities/charities.component';
 import { DonateFormComponent } from './donate-form/donate-form.component';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component';
 import { CharitydetailsFormComponent } from './charitydetails-form/charitydetails-form.component';
 import { BeneficiaryFormComponent } from './beneficiary-form/beneficiary-form.component';
@@ -29,6 +29,8 @@ import { CharityFormComponent } from './component/charity-form/charity-form.comp
 import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
 import { MoreComponent } from './pages/more/more.component';
 import { AdminDashComponent } from './component/admin-dash/admin-dash.component';
+import { CommonModule } from '@angular/common';
+import { DonateComponent } from './donate/donate.component';
 
 
 @NgModule({
@@ -55,7 +57,10 @@ import { AdminDashComponent } from './component/admin-dash/admin-dash.component'
     CharityFormComponent,
     MoreComponent,
     AdminRegisterComponent,
-    AdminDashComponent
+    AdminDashComponent,
+    DonateComponent
+
+
   ],
   imports: [
     BrowserModule,   
@@ -64,7 +69,9 @@ import { AdminDashComponent } from './component/admin-dash/admin-dash.component'
     BrowserAnimationsModule,
     MatTabsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
+    
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

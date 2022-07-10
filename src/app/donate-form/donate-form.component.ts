@@ -6,7 +6,7 @@ import { CharityService } from '../services/charity.service';
 @Component({
   selector: 'app-donate-form',
   templateUrl: './donate-form.component.html',
-  styleUrls: ['./donate-form.component.css']
+  styleUrls: ['./donate-form.component.css'],
 })
 export class DonateFormComponent implements OnInit {
   donate:any
