@@ -45,11 +45,17 @@ export class DonateFormComponent implements OnInit {
 
   }
 
-onSubmit(donations: {first_name:string,last_name:string, email:string, phone_number:string,amount_raised:string,donation_frequency:string,comment:string,charity:number}){
-  this.http.post('https://funds-flow.herokuapp.com/api/donations/',donations).subscribe((res)=>{
-    console.log(res);
-  })
-    console.log(donations)
+  onSubmit(donations: {first_name:string,last_name:string, email:string, phone_number:string,amount_raised:string,donation_frequency:string,comment:string,charity:number}){
+    this.http.post('https://funds-flow.herokuapp.com/api/donations/',donations).subscribe((res)=>{
+      console.log(res);
+    })
+      console.log(donations)
+    }
+  onSubmitAnonymous(anonymousDonations: {donation_amount:number,comment:string,charity:number}){
+    this.http.post('https://funds-flow.herokuapp.com/api/anon/',anonymousDonations).subscribe((res)=>{
+      console.log(res);
+    })
+      console.log(anonymousDonations)
   }
 
 
