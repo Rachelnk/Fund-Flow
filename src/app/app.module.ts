@@ -29,6 +29,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { CharityFormComponent } from './component/charity-form/charity-form.component';
 import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
 import { MoreComponent } from './pages/more/more.component';
+import { AdminDashComponent } from './component/admin-dash/admin-dash.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,9 @@ import { MoreComponent } from './pages/more/more.component';
     DonorRegisterComponent,
     CharityRegisterComponent,
     CharityFormComponent,
-    MoreComponent
+    MoreComponent,
+    AdminRegisterComponent,
+    AdminDashComponent
   ],
   imports: [
     BrowserModule,   
@@ -64,12 +67,6 @@ import { MoreComponent } from './pages/more/more.component';
     HttpClientModule,
     FormsModule
   ],
-  // imports: [
-  //   BrowserModule,
-  //   AppRoutingModule,
-  //   HttpClientModule,
-  //   FormsModule
-  // ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
