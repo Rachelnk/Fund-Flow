@@ -7,26 +7,69 @@
     <div class="row">
       <div class="col-md-3" *ngFor="let charity of charities">
         <div class="card" style="margin-bottom: 30px; border-radius: 3px;">
-          <img src="https://res.cloudinary.com/dtqnkzj6q/{{charity.charity_image}}" class="card-img-top" style="border-radius: 3px 3px 0px 0px;" alt="Charity Image">
+          <img src="https://res.cloudinary.com/dtqnkzj6q/{{charity.charity_image}}" class="card-img-top image-resize" style="border-radius: 3px 3px 0px 0px;" alt="{{charity.name}}" data-toggle="modal" attr.data-target="#{{charity.id}}" >
+          
           <div class="card-body">
-            <h5 class="card-title"> {{charity.name}}</h5>
-            <button class="more-details-btn" data-toggle="modal" data-target="#moreDetails" >More Details</button>
-            <a href="donate"><button class="donate-btn">Donate</button></a>
+            <h5 class="card-title">{{charity.name}}</h5>
+            <button class="more-details-btn" data-toggle="modal" attr.data-target="#{{charity.id}}">More Details</button>
+            <a routerLink="donate/{{charity.id}}" style="color:black;"><button class="donate-btn"> Donate</button></a>
 
 
           </div>
 
         </div>
 
-      </div>   
+      </div>
+      <!-- <div class="col-md-3">
+        <div class="card" style="margin-bottom: 30px; border-radius: 3px;">
+          <img src="/assets/images/happychildren.jpg" class="card-img-top" style="border-radius: 3px 3px 0px 0px;" alt="Charity Image">
+          <div class="card-body">
+            <h5 class="card-title"> Girl Child KE</h5>
+            <button class="more-details-btn" data-toggle="modal" data-target="#moreDetails" ><a href="contact">Contact</a></button>
+            <button class="donate-btn">Donate</button>
+
+
+          </div>
+
+        </div>
+
+      </div> -->
+      <!-- <div class="col-md-3">
+        <div class="card" style="margin-bottom: 30px; border-radius: 3px;">
+          <img src="/assets/images/happychildren.jpg" class="card-img-top" style="border-radius: 3px 3px 0px 0px;" alt="Charity Image">
+          <div class="card-body">
+            <h5 class="card-title"> Girl Child KE</h5>
+            <button class="more-details-btn" data-toggle="modal" data-target="#moreDetails" >More Details</button>
+            <button class="donate-btn">Donate</button>
+
+
+          </div>
+
+        </div>
+
+      </div> -->
+      <!-- <div class="col-md-3">
+        <div class="card" style="margin-bottom: 30px; border-radius: 3px;">
+          <img src="/assets/images/happychildren.jpg" class="card-img-top" style="border-radius: 3px 3px 0px 0px;" alt="Charity Image">
+          <div class="card-body">
+            <h5 class="card-title"> Girl Child KE</h5>
+            <button class="more-details-btn" data-toggle="modal" data-target="#moreDetails" >More Details</button>
+            <button class="donate-btn">Donate</button>
+
+
+          </div>
+
+        </div>
+
+      </div>            -->
       
     </div>
 
     
   </div>
-  <div class="modal fade " id="{{charity.description}}" tabindex="-1" role="dialog"
+  <div class="modal fade " id="{{charity.id}}" tabindex="-1" role="dialog"
                  aria-labelledby="exampleModalCenterTitle" aria-hidden="true" *ngFor="let charity of charities">
-                 <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+                 <div class="modal-dialog modal-dialog-centered modal-md modal-dialog-scrollable" role="document" >
                   <div class="modal-content popup">
                     <div class="modal-header">
                       <h5 class="modal-title" id="">{{charity.name}}</h5>
@@ -35,18 +78,13 @@
                       </button>
                   </div>
                   <div class="modal-body">
-                    <img src="https://res.cloudinary.com/dtqnkzj6q/{{charity.charity_image}}" class="card-img-top" style="border-radius: 3px 3px 0px 0px;" alt="Charity Image">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                      Excepteur sint occaecat cupidatat non proident, sunt 
-                      in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="https://res.cloudinary.com/dtqnkzj6q/{{charity.charity_image}}" class="card-img-top" style="border-radius: 3px 3px 0px 0px;" alt="Charity Image" height="300">
+                    <p style="margin-top:15px ;">{{charity.description}}</p>
           
 
                   </div>
                   <div class="modal-footer">
-                    <button class="donate-btn" >Donate</button>
+                    <button class="donate-btn">Donate</button>
                   </div>
                   </div>
                  </div>

@@ -35,7 +35,7 @@ span{
 .right{
     width: 50%;
     min-height: 200px;
-    background: url(../../../assets/imagez/pexels-spencer-selover-428333.jpg)no-repeat center/cover;
+    background: url(/assets/images/blackandwhitepic.jpg)no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,6 +44,8 @@ span{
     /* color: white; */
     margin-left: -200px;
     margin-top: -300px;
+    /* filter: brightness(50%); */
+
 }
 .right h1{
     font-size: 40px;

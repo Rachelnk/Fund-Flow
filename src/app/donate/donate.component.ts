@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CharityService } from '../services/charity.service';
 
 @Component({
   selector: 'app-donate',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./donate.component.css']
 })
 export class DonateComponent implements OnInit {
+  charities:any
 
-  constructor() { }
+  constructor(private charityService: CharityService) { }
 
   ngOnInit(): void {
+    // this.charityService.getCharities().subscribe(
+    //   response=> {
+    //     this.charities=response
+    //     console.log(response)
+    //   }
+    // )
   }
 
 }

@@ -14,11 +14,12 @@ import { CharityRegisterComponent } from './component/charity-register/charity-r
 import { DonorRegisterComponent } from './component/donor-register/donor-register.component';
 import { CharityFormComponent } from './component/charity-form/charity-form.component';
 import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
-import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component'
+import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component';
+
 // import { MoreComponent } from './pages/more/more.component';
 
 const routes: Routes = [
-  {path: 'donate', component: DonateComponent },
+  {path: 'charities/donate/:id', component: DonateComponent },
   {path: 'contact', component: ContactComponent},
   {path:'',component:HomeComponent},
   {path:'about',component:AboutComponent},

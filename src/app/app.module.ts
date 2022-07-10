@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { CharitiesComponent } from './charities/charities.component';
-import { DonateComponent } from './donate/donate.component';
 import { DonateFormComponent } from './donate-form/donate-form.component';
 import { RouterModule } from '@angular/router';
 import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component';
@@ -37,7 +36,6 @@ import { MoreComponent } from './pages/more/more.component';
     ContactComponent,
     ContactFormComponent,
     CharitiesComponent,
-    DonateComponent,
     DonateFormComponent,
     CharityDashboardComponent,
     CharitydetailsFormComponent,
@@ -54,7 +52,8 @@ import { MoreComponent } from './pages/more/more.component';
     DonorRegisterComponent,
     CharityRegisterComponent,
     CharityFormComponent,
-    MoreComponent
+    MoreComponent,
+
   ],
   imports: [
     BrowserModule,   

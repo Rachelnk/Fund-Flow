@@ -32,9 +32,13 @@
   background-color: #59BBA4;
   color: black;
   border:none;
-  border-radius: 5px;
   padding: 5px;
+  border-radius: 3px;
 
 
 }
-
+.image-resize{
+  height: 300px;
+  object-fit: cover;
+  object-position: center center;
+}
