@@ -14,7 +14,8 @@ import { CharityRegisterComponent } from './component/charity-register/charity-r
 import { DonorRegisterComponent } from './component/donor-register/donor-register.component';
 import { CharityFormComponent } from './component/charity-form/charity-form.component';
 import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
-import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component'
+import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component';
+
 // import { MoreComponent } from './pages/more/more.component';
 import { AdminDashComponent } from './component/admin-dash/admin-dash.component';
 

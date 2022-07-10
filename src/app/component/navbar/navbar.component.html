@@ -4,7 +4,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="background-color: rgba(165, 165, 165, 0) ;">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink=""><img class="navbar-brand" src="../assets/image/logo2.jpeg" alt="..."
-        height="120" width="150"></a>
+        height="60" width="80"></a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,54 +29,46 @@
 
           </a>
         </li>
-        <!-- <li class="nav-item">
-
-          <a class="nav-link active" routerLink="team">TEAM
-
-          </a>
-        </li> -->
-        
         <li class="nav-item">
 
           <a class="nav-link active" routerLink="contact">CONTACT US
 
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isLoggedIn && data.is_donor">
+          <a class="nav-link active" routerLink="donor-dashboard">{{username | uppercase}}
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn && data.is_staff">
 
-          <a class="nav-link active" routerLink="charity-dashboard">CHARITY DASHBOARD
+          <a class="nav-link active" routerLink="charities">ADMIN
 
           </a>
         </li>
-        <li class="nav-item">
+        
+        <li class="nav-item" *ngIf="isLoggedIn && data.is_charity">
+
+          <a class="nav-link active" routerLink="charity-dashboard">DASHBOARD
+
+          </a>
+        </li>
+        <!-- <li class="nav-item">
 
           <a class="nav-link active" routerLink="admin-dash">ADMIN
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
 
-          <!-- <div class="dropdown">
-            <a
-              class="btn btn-light dropdown-toggle"
-              href="#"
-              role="button"
-              id="dropdownMenuLink"
-              data-mdb-toggle="dropdown"
-              aria-expanded="false"
-            >
-              PAGES
-            </a>
-          
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="/profile/">Profile</a></li>
-              <li><a class="dropdown-item" href="/update/">Update Profile</a></li>
-            </ul>
-          </div> -->
         </li>
-        <a class="pt-1 mb-4" href="login">
+        <a class="pt-1 mb-4" href="login"  *ngIf="!isAuthenticated">
           <button type="submit" class="btn btn-lg btn-block" style="background-color:#efc94c" type="button">Login</button>
 
       </a>
+
+      <a class="pt-1 mb-4" href="login"  *ngIf="isAuthenticated">
+        <button type="submit" class="btn btn-lg btn-block" style="background-color:#efc94c"(click)="logout()" type="button">Log Out</button>
+
+    </a>
       </ul>
     </div>
   </div>

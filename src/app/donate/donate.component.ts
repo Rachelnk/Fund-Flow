@@ -12,12 +12,12 @@ export class DonateComponent implements OnInit {
   constructor(private charityService: CharityService) { }
 
   ngOnInit(): void {
-    this.charityService.getCharities().subscribe(
-      response=> {
-        this.charities=response
-        console.log(response)
-      }
-    )
+    // this.charityService.getCharities().subscribe(
+    //   response=> {
+    //     this.charities=response
+    //     console.log(response)
+    //   }
+    // )
   }
 
 }

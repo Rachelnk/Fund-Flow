@@ -12,7 +12,7 @@ export class DonateFormComponent implements OnInit {
   donate:any
   charity:any
 
-  constructor(private donateService:DonationService, private charityService:CharityService) { }
+  constructor(private donateService:DonationService) { }
 
   ngOnInit(): void {
     this.donateService.createDonation().subscribe(

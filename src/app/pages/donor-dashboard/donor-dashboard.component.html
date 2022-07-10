@@ -1,7 +1,7 @@
 <section>
   <a routerLink="donor-dashboard"></a>
   <div class="container">
-    <h1 class="text-center">Donor</h1>
+    <h1 class="text-center">{{ currentUser.username }}</h1>
     <div class="row">
       <div class="col-4">
         <div class="card" style="width: 18rem;">
@@ -38,12 +38,14 @@
     <form>
       <div class="row mb-3 pt-2">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Donor Full Name</label>
+        <p *ngIf="user">{{user.is_donor}}</p>
         <div class="col-sm-10">
           <input type="name" class="form-control" id="inputFullName">
         </div>
       </div>
       <div class="row mb-3">
         <label for="inputPassword3" class="col-sm-2 col-form-label">Donor Email</label>
+        <p *ngIf="user"p>{{user.email}}</p>
         <div class="col-sm-10">
           <input type="email" class="form-control" id="inputEmail">
         </div>
