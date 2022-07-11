@@ -19,7 +19,6 @@ export class DonateComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.getCharity();
     this.getBeneficiary();
-    console.log(this.route.snapshot.params['id'])
   }
   getCharity(){
     this.charityService.getCharityDetails(this.id).subscribe(data=>{
@@ -35,6 +34,7 @@ export class DonateComponent implements OnInit {
     })
 
   }
+
 
 
 }

@@ -37,21 +37,21 @@
     </div>
     <form>
       <div class="row mb-3 pt-2">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Donor Full Name</label>
-        <p *ngIf="user">{{user.is_donor}}</p>
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Full Name</label>
+        <p *ngIf="user">{{user.first_name}} {{user.last_name}}</p>
         <div class="col-sm-10">
           <input type="name" class="form-control" id="inputFullName">
         </div>
       </div>
       <div class="row mb-3">
-        <label for="inputPassword3" class="col-sm-2 col-form-label">Donor Email</label>
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
         <p *ngIf="user"p>{{user.email}}</p>
         <div class="col-sm-10">
           <input type="email" class="form-control" id="inputEmail">
         </div>
       </div>
       <div class="row mb-3">
-        <label for="inputPassword3" class="col-sm-2 col-form-label">Donor Number</label>
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Number</label>
         <div class="col-sm-10">
           <input type="number" class="form-control" id="inputPhoneNumber">
         </div>

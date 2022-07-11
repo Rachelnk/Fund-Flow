@@ -3,22 +3,38 @@
   <mat-tab-group mat-align-tabs="center" style="margin-bottom: 30px;">
     <mat-tab label="Donate Now"> 
     <div class="donate-form" style="margin-top: 15px; margin-bottom: 15px;">
-      <form action="">
-        
+      <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit(f.value)"
+      #f="ngForm" novalidate >
+        <!-- {{f.value | json}} -->
         <div class="row">
-          
+          <h2 name="charity"[(ngModel)]="form.charity" style="display: none;">{{charity}}</h2>
           <!-- full name -->
             <div class="col-md-6">
               <div class="form-group">
                 <label for="firstname">First Name</label>
-                <input type="text" class="form-control" id="first-name" required placeholder="First Name">
+                <input type="text" class="form-control" name="first_name" [(ngModel)]="form.first_name" minlength="3" required
+              first_name #first_name="ngModel" placeholder="First name" />
+              <div class="alert-danger" *ngIf="first_name.errors && f.submitted">
+                <div *ngIf="first_name.errors?.['required']">Last Name Required</div>
+                <div *ngIf="first_name.errors?.['minlength']">
+                  Last Name must have atleast 3 characters
+                </div>
+              </div>
               </div>
             </div>
+            
             <!-- email field -->
             <div class="col-md-6">
               <div class="form-group">
                 <label for="lastname">Last Name</label>
-                <input type="text" class="form-control" id="last-name" placeholder="Last Name" required>
+                <input type="text" class="form-control" name="last_name" [(ngModel)]="form.last_name" required minlength="3"
+              last_name #last_name="ngModel" placeholder="Last name" />
+              <div class="alert-danger" *ngIf="last_name.errors && f.submitted">
+                <div *ngIf="last_name.errors?.['required']">Last Name Required</div>
+                <div *ngIf="last_name.errors?.['minlength']">
+                  Last Name must have atleast 3 characters
+                </div>
+              </div>
               </div>
             </div>
 
@@ -30,7 +46,14 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label for="Email">Email</label>
-                <input type="text" class="form-control" id="email" placeholder="Email" required>
+                <input type="email" class="form-control" name="email" [(ngModel)]="form.email" required email
+              #email="ngModel" placeholder="Email" />
+              <div class="alert-danger" *ngIf="email.errors && f.submitted">
+                <div *ngIf="email.errors?.['required']">Email is required</div>
+                <div *ngIf="email.errors?.['email']">
+                  Email must be a valid email address
+                </div>
+              </div>
               </div>
             </div>      
 
@@ -40,7 +63,11 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="phone-number">Phone Number</label>
-              <input type="number" class="form-control" id="phone-number" required placeholder="Phone Number">
+              <input type="number" class="form-control" name="phone_number" [(ngModel)]="form.phone_number" required phone_number
+              #phone_number="ngModel" placeholder="Phone Number" />
+              <div class="alert-danger" *ngIf="phone_number.errors && f.submitted">
+                <div *ngIf="phone_number.errors?.['required']">Email is required</div>
+              </div>
             </div>
           </div>
         </div>
@@ -49,7 +76,11 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="comment">Comment</label>
-              <textarea id="comment" class="form-control" rows="4" required placeholder="Comment"></textarea>
+              <textarea id="message" class="form-control" rows="4" name="comment" id="comment" [(ngModel)]="form.comment" required minlength="3"
+              maxlength="80" #comment="ngModel" placeholder="Write your comment..."></textarea>
+              <div class="alert-danger" *ngIf="comment.errors && f.submitted">
+                <div *ngIf="comment.errors?.['required']">Add a comment</div>
+              </div>
             </div>
         </div>
 
@@ -59,7 +90,11 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="donation-amount">Donation Amount</label>
-              <input type="number" class="form-control" id="donation-amount" required>
+              <input type="number" class="form-control" id="donation-amount" name="amount_raised" [(ngModel)]="form.amount_raised" required amount_raised
+              #amount_raised="ngModel" placeholder="Donation Amount" />
+              <div class="alert-danger" *ngIf="amount_raised.errors && f.submitted">
+                <div *ngIf="amount_raised.errors?.['required']">Enter amount</div>
+              </div>
             </div>
           </div>
         </div>
@@ -68,11 +103,21 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="donation-frequency">Donation Frequency</label><br>
-              <select name="frequency" id="frequency" class="form-control">
+              <!-- <select name="frequency" id="frequency" class="form-control">
                 <option value="once">Once</option>
                 <option value="monthly">Monthly</option>
                 <option value="annually">Annually</option>
+              </select> -->
+              <select #frequency name="donation_frequency"[(ngModel)]="form.donation_frequency" class="form-control"
+              >
+                <option *ngFor = "let type of donation_frequency" [value]="type">{{type}}
+                </option>
               </select>
+
+              <!-- <select class="form-select" name="donation_frequency">
+                <option selected>Donation Freq</option>
+                <option *ngFor="let type of donation_frequency">{{type}}</option>
+              </select> -->
             </div>
           </div>
         </div>
@@ -100,15 +145,22 @@
   </mat-tab>
 
   <mat-tab label="Donate Anonymously">
-    <form action="
-    ">
+    <form *ngIf="!isSuccessful" name="form" (ngSubmit)="anonymous.form.valid && onSubmitAnonymous(anonymous.value)"
+    #anonymous="ngForm" novalidate>
+     <!-- {{anonymous.value | json}} -->
+     <h2 name="charity"[(ngModel)]="form.charity" style="display: none;">{{charity}}</h2>
     <div class="donate-form" style="margin-top: 15px; margin-bottom: 15px;">
       <div class="row">
         
         <div class="col-md-12">
           <div class="form-group">
             <label for="comment">Comment</label>
-            <textarea id="comment" class="form-control" rows="4" required placeholder="Comment"></textarea>
+            <!-- <textarea id="comment" class="form-control" rows="4" required placeholder="Comment"></textarea> -->
+            <textarea id="comment" class="form-control" rows="4" name="comment" id="comment" [(ngModel)]="form.comment" required minlength="3"
+              maxlength="80" #comment="ngModel" placeholder="Write your comment..."></textarea>
+              <div class="alert-danger" *ngIf="comment.errors && anonymous.submitted">
+                <div *ngIf="comment.errors?.['required']">Add a comment</div>
+              </div>
           </div>
       </div>
 
@@ -118,7 +170,9 @@
         <div class="col-md-12">
           <div class="form-group">
             <label for="donation-amount">Donation Amount</label>
-            <input type="number" class="form-control" id="donation-amount" required>
+            <!-- <input type="number" class="form-control" id="donation-amount" required> -->
+            <input type="number" class="form-control"id="donation-amount" name="donation_amount" [(ngModel)]="form.donation_amount" required donation_amount
+              #donation_amount="ngModel" placeholder="Amount" />
           </div>
         </div>
       </div>
