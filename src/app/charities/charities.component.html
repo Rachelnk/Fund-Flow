@@ -12,7 +12,8 @@
           <div class="card-body">
             <h5 class="card-title">{{charity.name}}</h5>
             <button class="more-details-btn" data-toggle="modal" attr.data-target="#{{charity.id}}">More Details</button>
-            <a routerLink="donate/{{charity.id}}" style="color:black;"><button class="donate-btn"> Donate</button></a>
+            <!-- <a routerLink="donate/{{charity.id}}" style="color:black;"><button class="donate-btn"> Donate</button></a> -->
+            <a [routerLink]="['/charities/donate/'+charity.id]" style="color:black;"><button class="donate-btn"> Donate</button></a>
 
 
           </div>
