@@ -10,8 +10,7 @@ const httpOptions = {
   headers:new HttpHeaders({ 'Content-Type': 'application/json'})
 };
 // const API_URL = 'http://127.0.0.1:8000/';
-const API_URL = 'http://funds-flow.herokuapp.com/';
-
+const API_URL = "http://funds-flow.herokuapp.com/";
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

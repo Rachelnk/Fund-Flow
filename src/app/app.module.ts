@@ -28,6 +28,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { CharityFormComponent } from './component/charity-form/charity-form.component';
 import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
 import { MoreComponent } from './pages/more/more.component';
+import { AdminDashComponent } from './component/admin-dash/admin-dash.component';
 import { CommonModule } from '@angular/common';
 import { DonateComponent } from './donate/donate.component';
 
@@ -55,6 +56,8 @@ import { DonateComponent } from './donate/donate.component';
     CharityRegisterComponent,
     CharityFormComponent,
     MoreComponent,
+    AdminRegisterComponent,
+    AdminDashComponent,
     DonateComponent
 
 
@@ -70,8 +73,6 @@ import { DonateComponent } from './donate/donate.component';
     CommonModule,
     
   ],
-
-
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })

@@ -75,6 +75,8 @@
             <!-- <input type="password" name="password" class="form-control" id="password" placeholder="Create Password"> -->
             <input type="password" class="form-control" name="password1" [(ngModel)]="form.password1" required
               minlength="8" #password1="ngModel" placeholder="Create Password" />
+              
+              
             <div class="alert-danger" *ngIf="password1.errors && f.submitted">
               <div *ngIf="password1.errors?.['required']">Password is required</div>
               <div *ngIf="password1.errors?.['minlength']">
@@ -85,7 +87,7 @@
             <div class="mb-4">
               <!-- <input type="password" name="password" class="form-control" id="password" placeholder="Confirm Password"> -->
               <input type="password" class="form-control" name="password2" [(ngModel)]="form.password2" required
-                minlength="8" pattern="{{password1.value}}" #password2="ngModel" placeholder="Confirm Password" />
+                minlength="8" pattern="{{password1.value}}" #password2="ngModel" placeholder="Confirm Password"/>                
                 <div class="alert-danger" *ngIf="password2.errors && f.submitted">
                   <div *ngIf="password2.errors?.['required']">Password is required</div>
                   <div *ngIf="password2.errors?.['pattern']">Password Doesn't Match</div>

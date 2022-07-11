@@ -17,6 +17,7 @@ import { AdminRegisterComponent } from './component/admin-register/admin-registe
 import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard.component';
 
 // import { MoreComponent } from './pages/more/more.component';
+import { AdminDashComponent } from './component/admin-dash/admin-dash.component';
 
 const routes: Routes = [
   {path: 'charities/donate/:id', component: DonateComponent },
@@ -33,32 +34,13 @@ const routes: Routes = [
   {path: 'charity-form',component:CharityFormComponent},
   {path: 'admin-register',component:AdminRegisterComponent},
   {path: 'charity-dashboard', component:CharityDashboardComponent},
-  {path:'more',component:MoreComponent}
+  {path:'more',component:MoreComponent},
+  {path: 'admin-dash',component:AdminDashComponent},
 ];
-
-
-
-// const routes: Routes = [
-//   {path:'',component:HomeComponent},
-//   {path:'about',component:AboutComponent},
-//   {path:'team',component:TeamComponent},
-//   {path:'testimonial',component:TestimonialComponent},
-//   {path:'donor-dashboard',component:DonorDashboardComponent}
-// ];
-
-
-// const routes: Routes = [
-//   {path: 'login', component:LoginComponent},
-//   {path: 'charity-register', component:CharityRegisterComponent},
-//   {path: 'donor-register',component:DonorRegisterComponent},
-//   {path: 'charity-form',component:CharityFormComponent},
-//   {path: 'admin-register',component:AdminRegisterComponent},
-// ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-// export const routingComponents =  [DonateComponent, ContactComponent]
-export const routingComponents = [ LoginComponent, CharityRegisterComponent, DonorRegisterComponent, CharityFormComponent, AdminRegisterComponent]
+export const routingComponents = [ LoginComponent, CharityRegisterComponent, DonorRegisterComponent, CharityFormComponent, AdminRegisterComponent, AdminDashComponent]

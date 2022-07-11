@@ -18,6 +18,7 @@ export class DonorDashboardComponent implements OnInit {
   currentUser:any
   user:any
   is_donor?:boolean
+  // const API_URL= "http://funds-flow.herokuapp.com/";
 
   
   ngOnInit(): void {
