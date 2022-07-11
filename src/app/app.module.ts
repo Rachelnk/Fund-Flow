@@ -13,6 +13,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { CharityFormComponent } from './component/charity-form/charity-form.component';
 import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
 import { AdminDashComponent } from './component/admin-dash/admin-dash.component';
+import { PaypalComponent } from './component/paypal/paypal.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AdminDashComponent } from './component/admin-dash/admin-dash.component'
     FooterComponent,
     CharityFormComponent,
     AdminRegisterComponent,
-    AdminDashComponent
+    AdminDashComponent,
+    PaypalComponent
   ],
   imports: [
     BrowserModule,
