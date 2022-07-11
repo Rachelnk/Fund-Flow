@@ -17,7 +17,6 @@ h1 {
   z-index: 1;
   overflow: hidden;
   box-shadow: 10px 20px 12px #727272;
-  height:80%;
 }
 .team-img {
   position: relative;
@@ -76,6 +75,11 @@ h1 {
 }
 .single-team:hover .team-content {
   background: #59bba4;
+}
+.image-resize{
+  height: 320px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 @media (max-width: 600px) {
