@@ -38,6 +38,7 @@ export class CharityRegisterComponent implements OnInit {
       },
       err => {
         this.errorMessage = err.error.message;
+        alert(this.errorMessage)
         this.isSignUpFailed = true
       });
   }
