@@ -10,6 +10,7 @@ export class CharityFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+   
   }
 
 }

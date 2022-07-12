@@ -1,0 +1,55 @@
+<div class="banner">
+  <h1 class="charity-heading"><span class="mission"> Our mission: Lorem ipsum dolor sit amet</span> <br>
+    Our Charities</h1>
+</div>
+<div class="container"> 
+  <div class="charities-section">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let charity of charities">
+        <div class="card" style="margin-bottom: 30px; border-radius: 3px;">
+          <img src="https://res.cloudinary.com/dtqnkzj6q/{{charity.charity_image}}" class="card-img-top image-resize" style="border-radius: 3px 3px 0px 0px;" alt="{{charity.name}}" data-toggle="modal" attr.data-target="#{{charity.id}}" >
+          
+          <div class="card-body">
+            <h5 class="card-title">{{charity.name}}</h5>
+            <button class="more-details-btn" data-toggle="modal" attr.data-target="#{{charity.id}}">More Details</button>
+            <!-- <a routerLink="donate/{{charity.id}}" style="color:black;"><button class="donate-btn"> Donate</button></a> -->
+            <a [routerLink]="['/charities/donate/'+charity.id]" style="color:black;"><button class="donate-btn"> Donate</button></a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+  
+    </div>
+
+    
+  </div>
+  <div class="modal fade " id="{{charity.id}}" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true" *ngFor="let charity of charities">
+                 <div class="modal-dialog modal-dialog-centered modal-md modal-dialog-scrollable" role="document" >
+                  <div class="modal-content popup">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="">{{charity.name}}</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="https://res.cloudinary.com/dtqnkzj6q/{{charity.charity_image}}" class="card-img-top" style="border-radius: 3px 3px 0px 0px;" alt="Charity Image" height="300">
+                    <p style="margin-top:15px ;">{{charity.description}}</p>
+          
+
+                  </div>
+                  <div class="modal-footer">
+                    <a [routerLink]="['/charities/donate/'+charity.id]" style="color:black;"><button class="donate-btn"> Donate</button></a>
+                  </div>
+                  </div>
+                 </div>
+
+  </div>
+  
+
+
+</div>

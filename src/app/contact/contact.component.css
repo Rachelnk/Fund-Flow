@@ -1,0 +1,43 @@
+.banner{
+  background-image: url('/assets/images/contact-banner.jpg');
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+
+}
+.contact-heading {
+  padding-top:150px;
+  padding-left: 30px;
+  color: white;
+}
+
+
+.contact-page-heading {
+  color: #59BBA4 ;
+}
+
+#contact-section {
+  margin-top: 20px;
+  /* border-width:10px; */
+}
+.contact-info {
+  margin-top:10px;
+  margin-bottom: 50px;
+
+}
+
+ /* .col-container, .row{
+  display: flex;
+  width: 100%;
+  flex-direction : row;
+} */
+
+.card{
+  height: 100%;
+} 
+#card-email:hover{
+  background-color: #ed5f467c;
+
+}

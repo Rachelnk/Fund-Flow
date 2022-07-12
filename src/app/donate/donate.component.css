@@ -1,0 +1,23 @@
+.banner{
+  background-image: url('/assets/images/hands.jpg');
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+.row {
+  display: flex;
+}
+
+.donate-heading{
+  padding-top: 150px;
+  padding-left: 30px;
+  color: white;
+}
+.charities-section{
+  margin-top: 20px;
+}
+.charity-img {
+  border-radius: 50%;
+}

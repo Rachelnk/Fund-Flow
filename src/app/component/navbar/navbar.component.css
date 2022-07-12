@@ -4,14 +4,20 @@
     padding: 0 20px;
     
     color: black;
+    padding-top: 10px !important;
 }
 .nav-item a{
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
     color: black;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 .navbar-brand{
     font-size: 30px;
     font-weight: bold;
     color: black; 
+}
+
+.navbar-brand  img{
+margin-left: 10px;
 }
