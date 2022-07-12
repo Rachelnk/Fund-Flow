@@ -162,14 +162,14 @@
                 <h2 class="text-center fs-3 logo fw-bold mb-5">New Charity Applicants</h2>
                 <div class="charities-section">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3" *ngFor="let charity of charities">
                             <div class="card" style="margin-bottom: 30px; border-radius: 3px;">
                                 <img src="https://images.unsplash.com/photo-1509099927777-1b8a87bc3b21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
                                     class="card-img-top" style="border-radius: 3px 3px 0px 0px;" alt="Charity Image">
                                 <div class="card-body">
-                                    <h5 class="card-title mb-3"> Feed a Girl</h5>
-                                    <button type="button" class="btn btn" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal" style="background-color: #51b4b4;">
+                                    <h5 class="card-title mb-3">{{charity.charity_name}}</h5>
+                                    <button type="button" class="btn btn" data-toggle="modal"
+                                    attr.data-target="#{{charity.id}}" style="background-color: #51b4b4;">
                                         More Details
                                     </button>
 
@@ -179,21 +179,7 @@
                             </div>
 
                         </div>
-                        <div class="col-md-3">
-                            <div class="card" style="margin-bottom: 30px; border-radius: 3px;">
-                                <img src="https://images.unsplash.com/photo-1509099927777-1b8a87bc3b21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
-                                    class="card-img-top" style="border-radius: 3px 3px 0px 0px;" alt="Charity Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-3"> Girl Child KE</h5>
-                                    <button type="button" class="btn btn" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal" style="background-color: #51b4b4;">
-                                        More Details
-                                    </button>
-                                </div>
-
-                            </div>
-
-                        </div>
+                
 
 
                     </div>
@@ -201,12 +187,12 @@
 
                 </div>
 
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
+                <div class="modal fade" id="{{charity.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true" *ngFor="let charity of charities">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Girl Child KE</h5>
+                                <h5 class="modal-title" id="">{{charity.charity_name}}</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -214,14 +200,8 @@
                                 <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80"
                                     class="card-img-top mb-3" style="border-radius: 3px 3px 0px 0px;"
                                     alt="Charity Image">
-                                <p><strong>Description:</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip
-                                    ex ea
-                                    commodo consequat.</p>
-                                <p><strong>Tel:</strong> 123456789</p>
+                                <p><strong>Description:</strong><br>{{charity.description}}</p>
+                                <p><strong>Tel:</strong>{{charity.phone_number}}</p>
                                 <p><strong>Email:</strong> girlchild@gmail.com</p>
                                 <p><strong>Target Amount:</strong> 100,000 Dollars</p>
                                 <p><strong>Charity Type:</strong> Food Relief</p>
@@ -260,15 +240,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Collo</td>
-                    <td>Collo</td>
-                    <td>Collo</td>
-                    <td>fe@mail.com</td>
-                    <td>07/07/2022</td>
+                <tr *ngFor="let user of users">
+                    <th scope="row">{{user.id}}</th>
+                    <td>{{user.username}}</td>
+                    <td>{{user.first_name}}</td>
+                    <td>{{user.last_name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.date_joined}}</td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <th scope="row">2</th>
                     <td>Jeff</td>
                     <td>Jeff</td>
@@ -283,7 +263,7 @@
                     <td>Bel</td>
                     <td>chtoday@mail.com</td>
                     <td>07/07/2022</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         <h5 class="text-center fs-3 logo fw-bold mb-3 mt-5">Charities</h5>
@@ -293,25 +273,25 @@
                 <tr>
                     <th scope="col">#Id</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Location</th>
                     <th scope="col">Country</th>
+                    <th scope="col">Mission</th>
                     <th scope="col">Email</th>
                     <th scope="col">Date Created</th>
                     <th scope="col">Delete Charity</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Feed a girl</td>
-                    <td>Nakuru</td>
-                    <td>Kenya</td>
-                    <td>fe@mail.com</td>
-                    <td>07/07/2022</td>
+                <tr *ngFor="let charity of charities">
+                    <th scope="row">{{charity.id}}</th>
+                    <td>{{charity.charity_name}}</td>
+                    <td>{{charity.country}}</td>
+                    <td>{{charity.mission}}</td>
+                    <td>{{charity.email}}</td>
+                    <td>{{charity.date_joined}}</td>
                     <td><button type="button" class="btn btn"
                         style="background-color: #ed5e46;">Delete</button></td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <th scope="row">2</th>
                     <td>Girl Child KE</td>
                     <td>Garissa</td>
@@ -330,7 +310,7 @@
                     <td>07/07/2022</td>
                     <td><button type="button" class="btn btn"
                         style="background-color: #ed5e46;">Delete</button></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         <h5 class="text-center fs-3 logo fw-bold mb-3 mt-5">Donors</h5>
@@ -347,22 +327,22 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Ndolo</td>
-                    <td>Ndolo</td>
-                    <td>Ndolo</td>
-                    <td>fe@mail.com</td>
-                    <td>07/07/2022</td>
+                <tr *ngFor="let donor of donors">
+                    <th scope="row">{{donor.id}}</th>
+                    <td>{{donor.username}}</td>
+                    <td>{{donor.first_name}}</td>
+                    <td>{{donor.last_name}}</td>
+                    <td>{{donor.email}}</td>
+                    <td>{{donor.date_joined}}</td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <th scope="row">2</th>
                     <td>Rachel</td>
                     <td>Rachel</td>
                     <td>Rachel</td>
                     <td>girlchild@mail.com</td>
                     <td>07/07/2022</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>
@@ -370,23 +350,12 @@
         <h5 class="text-center fs-3 logo fw-bold mb-3 mt-5">Feedback</h5>
         <hr>
         <div class="row mt-4">
-            <div class="card-feed" style="width: 18rem; margin-left: 5vh;">
+            <div class="card-feed" style="width: 18rem; margin-left: 5vh;" *ngFor="let feedback of feedbacks">
                 <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-bold"><strong>Name:</strong> John Doe</h6><br>
-                    <h6 class="card-subtitle mb-2 text-bold"><strong>Email:</strong> John@mail.com</h6><hr>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <!-- <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a> -->
-                </div>
-            </div>
-
-            <div class="card-feed" style="width: 18rem; margin-left: 5vh;">
-                <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-bold"><strong>Name:</strong> Jane Doe</h6><br>
-                    <h6 class="card-subtitle mb-2 text-bold"><strong>Email:</strong> Janw@mail.com</h6><hr>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <h6 class="card-subtitle mb-2 text-bold"><strong>Name: </strong>{{feedback.name}}</h6><br>
+                    <h6 class="card-subtitle mb-2 text-bold"><strong>Email: </strong>{{feedback.email}}</h6><hr>
+                    <h6 class="card-subtitle mb-2 text-bold"><strong>Phone: </strong>{{feedback.phone_number}}</h6><hr>
+                    <p class="card-text">{{feedback.message}}</p>
                     <!-- <a href="#" class="card-link">Card link</a>
                     <a href="#" class="card-link">Another link</a> -->
                 </div>
