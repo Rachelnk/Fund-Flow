@@ -68,21 +68,22 @@
             <div class="col-md-6" style="margin-top:40px ;"> 
               
               <div class="form-group">
-                <input type="file" required id="image" placeholder="Add image">
+                <input type="file" required id="image" class="form-control" placeholder="Add image">
 
               </div>
 
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="mission">Mission</label>
-                <input type="text" placeholder="Charity Mission" id="mission" required class="form-control">
-              </div>                 
-            </div>             
+                      
                      
           </div>
 
           <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="charity-name">Charity Name</label>
+                <input type="text" placeholder="Charity Name" id="charity-name" required class="form-control">
+              </div>                 
+            </div>            
             <div class="col-md-6">
               <div class="form-group">              
                 <label for="location">Location</label>
@@ -90,6 +91,13 @@
               </div>
 
             </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email" id="email" required class="form-control">
+              </div>                 
+            </div>
+            
             
             <div class="col-md-6">
               <div class="form-group">              
@@ -348,14 +356,28 @@
                 <input type="number" id="amount" class="form-control" placeholder="Amount To be Raised">
               </div>
 
-            </div>
+            </div>           
             
             <div class="col-md-6">
               <div class="form-group">              
                 <label for="deadline">Deadline</label>
                 <input type="date" id="deadline" class="form-control" required>
+              </div>
             </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="mission">Mission</label>
+                <input type="text" placeholder="Charity Mission" id="mission" required class="form-control">
+              </div>                 
+            </div> 
+            <div class="col-md-6">
+              <div class="form-group">              
+                <label for="date-formed">Date Formed</label>
+                <input type="date" id="date-formed" class="form-control" required>
+              </div>
             </div>
+            
             
             <div class="col-md-12">
               <!-- style="margin-top: 35px;" -->
