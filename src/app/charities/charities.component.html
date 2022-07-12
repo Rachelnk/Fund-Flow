@@ -10,7 +10,7 @@
           <img src="https://res.cloudinary.com/dtqnkzj6q/{{charity.charity_image}}" class="card-img-top image-resize" style="border-radius: 3px 3px 0px 0px;" alt="{{charity.name}}" data-toggle="modal" attr.data-target="#{{charity.id}}" >
           
           <div class="card-body">
-            <h5 class="card-title">{{charity.name}}</h5>
+            <h5 class="card-title">{{charity.charity_name}}</h5>
             <button class="more-details-btn" data-toggle="modal" attr.data-target="#{{charity.id}}">More Details</button>
             <!-- <a routerLink="donate/{{charity.id}}" style="color:black;"><button class="donate-btn"> Donate</button></a> -->
             <a [routerLink]="['/charities/donate/'+charity.id]" style="color:black;"><button class="donate-btn"> Donate</button></a>

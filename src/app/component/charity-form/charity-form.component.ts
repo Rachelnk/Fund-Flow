@@ -3,6 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Countries } from 'src/app/shared/country';
 import { countries } from 'src/app/shared/country-data-store';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
+import { Observable } from 'rxjs';
+const httpOptions = {
+  headers:new HttpHeaders({ 'Content-Type': 'application/json'})
+};
+
 @Component({
   selector: 'app-charity-form',
   templateUrl: './charity-form.component.html',
@@ -10,33 +16,42 @@ import { countries } from 'src/app/shared/country-data-store';
 })
 export class CharityFormComponent implements OnInit {
   public countries:any = countries
+  user:any = this.tokenStorageService.getUser().id;
   form: any = {
     charity_name:null,
-    last_name:null,
+    charity_image:null,
     email:null,
-    phone_number:null,
     amount_raised:null,
     donation_frequency:null,
     comment:null,
-  
-
-
+    user:this.user
   };
+
   id:any
-  donation_frequency:any= ['Once', 'Monthly', 'Annualy'];
+  target_amount:any= ['100000', '200000', '300000','400000','500000','600000','700000','800000','900000','1000000'];
   isSuccessful =  false;
   errorMessage = '';
+  is_charity?:boolean
+  currentUser:any
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private tokenStorageService:TokenStorageService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-   
-  }
-  onSubmit(donations: {name:string,last_name:string, email:string, phone_number:string,amount_raised:string,donation_frequency:string,comment:string,charity:number}){
-    this.http.post('https://funds-flow.herokuapp.com/api/donations/',donations).subscribe((res)=>{
-      console.log(res);
-    })
-      console.log(donations)
-    }
+    this.currentUser = this.tokenStorageService.getUser();
+    this.user = this.currentUser.id
+  
 
+  }
+  
+
+  onSubmit(charity: {charity_name:string,charity_image:File, email:string, location:string,country:string,target_amount:number,mission:string,date_formed:Date,deadline:Date,comment:string,user:number}){
+    this.currentUser = this.tokenStorageService.getUser();
+    this.user = this.currentUser.id
+    console.log(this.user)
+    this.http.put('https://funds-flow.herokuapp.com/api/post_details/' + this.user + '/' ,charity).subscribe((res)=>{
+      console.log(res);
+    });
+      // console.log(charity)
+    }
 }
+
