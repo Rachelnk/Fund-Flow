@@ -31,7 +31,7 @@ import { MoreComponent } from './pages/more/more.component';
 import { AdminDashComponent } from './component/admin-dash/admin-dash.component';
 import { CommonModule } from '@angular/common';
 import { DonateComponent } from './donate/donate.component';
-
+import { PaypalComponent } from './component/paypal/paypal.component';
 
 @NgModule({
   declarations: [
@@ -58,9 +58,8 @@ import { DonateComponent } from './donate/donate.component';
     MoreComponent,
     AdminRegisterComponent,
     AdminDashComponent,
-    DonateComponent
-
-
+    DonateComponent,
+    PaypalComponent
   ],
   imports: [
     BrowserModule,   
