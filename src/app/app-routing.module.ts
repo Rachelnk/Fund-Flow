@@ -18,6 +18,7 @@ import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard
 
 // import { MoreComponent } from './pages/more/more.component';
 import { AdminDashComponent } from './component/admin-dash/admin-dash.component';
+import { PaypalComponent } from './component/paypal/paypal.component';
 
 const routes: Routes = [
   {path: 'charities/donate/:id', component: DonateComponent },
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path: 'charity-dashboard', component:CharityDashboardComponent},
   {path:'more',component:MoreComponent},
   {path: 'admin-dash',component:AdminDashComponent},
+  {path: 'paypal',component:PaypalComponent},
 ];
 
 @NgModule({
@@ -43,4 +45,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ LoginComponent, CharityRegisterComponent, DonorRegisterComponent, CharityFormComponent, AdminRegisterComponent, AdminDashComponent]
+export const routingComponents = [ LoginComponent, CharityRegisterComponent, DonorRegisterComponent, CharityFormComponent, AdminRegisterComponent, AdminDashComponent, PaypalComponent]
