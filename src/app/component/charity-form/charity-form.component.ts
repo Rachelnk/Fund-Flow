@@ -5,6 +5,7 @@ import { Countries } from 'src/app/shared/country';
 import { countries } from 'src/app/shared/country-data-store';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 const httpOptions = {
   headers:new HttpHeaders({ 'Content-Type': 'application/json'})
 };
@@ -15,6 +16,7 @@ const httpOptions = {
   styleUrls: ['./charity-form.component.css']
 })
 export class CharityFormComponent implements OnInit {
+  loading:any
   public countries:any = countries
   user:any = this.tokenStorageService.getUser().id;
   form: any = {
@@ -34,7 +36,7 @@ export class CharityFormComponent implements OnInit {
   is_charity?:boolean
   currentUser:any
 
-  constructor(private http:HttpClient,private tokenStorageService:TokenStorageService, private route:ActivatedRoute) { }
+  constructor(private router:Router,private http:HttpClient,private tokenStorageService:TokenStorageService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.currentUser = this.tokenStorageService.getUser();
@@ -51,6 +53,10 @@ export class CharityFormComponent implements OnInit {
     console.log(this.user)
     this.http.put('https://funds-flow.herokuapp.com/api/post_details/' + this.user + '/' ,charity).subscribe((res)=>{
       console.log(res);
+      alert('Charity Details sent Successfully')
+      this.router.navigate(["charity-dashboard"]).then(() => {
+      window.location.reload();
+    });
     });
       // console.log(charity)
     }

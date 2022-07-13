@@ -3,3 +3,9 @@
     justify-content: center;
     align-items: center;
   }
+
+.img-fluid{
+  background-repeat: no-repeat;
+  object-fit: cover ;
+  object-position: center;
+}

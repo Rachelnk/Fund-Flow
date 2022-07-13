@@ -39,12 +39,23 @@ export class AdminDashService {
     // return this.httpClient.get('http://127.0.0.1:8000/api/charities/'+id +'/')
   }
   getDonorsDetails(id:any){
-    return this.httpClient.get('https://funds-flow.herokuapp.com/donors/'+id +'/')
+    return this.httpClient.get('https://funds-flow.herokuapp.com/donors/'+id +'/');
     // return this.httpClient.get('http://127.0.0.1:8000/api/charities/'+id +'/')
   }
   getFeedBackDetails(id:any){
-    return this.httpClient.get('https://funds-flow.herokuapp.com/api/feedback/'+id +'/')
+    return this.httpClient.get('https://funds-flow.herokuapp.com/api/feedback/'+id +'/');
     // return this.httpClient.get('http://127.0.0.1:8000/api/charities/'+id +'/')
   }
+  deleteCharity(id:any){
+    return this.httpClient.delete('https://funds-flow.herokuapp.com/api/charities/'+id);
+  }
+  deleteUser(id:any){
+    return this.httpClient.delete('https://funds-flow.herokuapp.com/users/'+id);
+  }
+  approve(status:any){
+    // return this.httpClient.put('https://funds-flow.herokuapp.com/')
+  }
+  decline(status:any){
 
+  }
 }
