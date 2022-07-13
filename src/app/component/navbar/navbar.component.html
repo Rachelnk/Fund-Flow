@@ -35,7 +35,7 @@
 
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="(isLoggedIn && data.is_charity) | async ">
 
           <a class="nav-link active" routerLink="charity-form">CHARITY FORM
 

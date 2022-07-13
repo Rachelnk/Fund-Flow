@@ -23,7 +23,7 @@ export class DonorDashboardComponent implements OnInit {
   
   ngOnInit(): void {
     this.currentUser = this.tokenStorageService.getUser();
-    this.http.get('http://funds-flow.herokuapp.com/users/' + this.currentUser.id + '/',httpOptions).subscribe(data => {
+    this.http.get('http://funds-flow.herokuapp.com/api/charity/' + this.currentUser.id + '/charity/',httpOptions).subscribe(data => {
       console.log(data)
       this.user=data
     })

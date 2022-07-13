@@ -43,7 +43,8 @@ export class NavbarComponent implements OnInit {
     this.currentUser = this.tokenStorageService.getUser();
     return this.http.get(API_URL + 'users/' + this.currentUser.id + '/',httpOptions).subscribe(data => {
       this.data=data
-    })
+    });
+
  
     
   }

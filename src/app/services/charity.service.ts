@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -26,6 +27,14 @@ export class CharityService {
   getCharityBeneficiaries(id:any){
     return this.httpClient.get('https://funds-flow.herokuapp.com/charity/'+id +'/beneficiaries/')
     
+  }
+  public getCharityDashboardDetails(id:any):Observable<any>{
+    return this.httpClient.get('https://funds-flow.herokuapp.com/api/charity/' + id + '/charity/')
+
+  }
+  public getCharityBeneficiariesDashboardDetails(pk:any):Observable<any>{
+    return this.httpClient.get('http://funds-flow.herokuapp.com/charity/'+pk+'/beneficiaries')
+
   }
 
 }

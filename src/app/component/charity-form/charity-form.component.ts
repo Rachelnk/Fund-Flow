@@ -39,6 +39,7 @@ export class CharityFormComponent implements OnInit {
   ngOnInit(): void {
     this.currentUser = this.tokenStorageService.getUser();
     this.user = this.currentUser.id
+    console.log(this.currentUser)
   
 
   }

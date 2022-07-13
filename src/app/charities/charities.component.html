@@ -1,12 +1,12 @@
-<div class="banner">
-  <h1 class="charity-heading"><span class="mission"> Our mission: Lorem ipsum dolor sit amet</span> <br>
+<div class="banner" *ngFor="let charity of charities">
+  <h1 class="charity-heading"><span class="mission"> Our mission: {{charity.mission}}</span> <br>
     Our Charities</h1>
 </div>
 <div class="container"> 
   <div class="charities-section">
     <div class="row">
       <div class="col-md-3" *ngFor="let charity of charities">
-        <div class="card" style="margin-bottom: 30px; border-radius: 3px;">
+        <div class="card" style="margin-bottom: 30px; border-radius: 3px;" *ngIf="charity.status">
           <img src="https://res.cloudinary.com/dtqnkzj6q/{{charity.charity_image}}" class="card-img-top image-resize" style="border-radius: 3px 3px 0px 0px;" alt="{{charity.name}}" data-toggle="modal" attr.data-target="#{{charity.id}}" >
           
           <div class="card-body">
@@ -21,7 +21,7 @@
         </div>
 
       </div>
-  
+
     </div>
 
     
