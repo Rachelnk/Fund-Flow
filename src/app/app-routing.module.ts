@@ -33,7 +33,7 @@ const routes: Routes = [
   {path: 'charity-register', component:CharityRegisterComponent},
   {path: 'donor-register',component:DonorRegisterComponent},
   {path: 'charity-form',component:CharityFormComponent},
-  {path: 'admin-register',component:AdminRegisterComponent},
+  {path: 'admin/testings/registration',component:AdminRegisterComponent},
   {path: 'charity-dashboard', component:CharityDashboardComponent},
   {path:'more',component:MoreComponent},
   {path: 'admin-dash',component:AdminDashComponent},

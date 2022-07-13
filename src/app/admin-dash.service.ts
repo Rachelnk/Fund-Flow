@@ -1,14 +1,3 @@
-// import { Injectable } from '@angular/core';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class AdminDashService {
-
-//   constructor() { }
-// }
-
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 @Injectable({

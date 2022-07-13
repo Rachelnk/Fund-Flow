@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminDashService } from 'src/app/admin-dash.service';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
 
 @Component({
   selector: 'app-admin-dash',
@@ -13,10 +14,18 @@ export class AdminDashComponent implements OnInit {
   users:any
   donors:any
   feedbacks: any;
-
-  constructor(private adminDashService:AdminDashService) { }
+  isAuthenticated = false;
+  username:any
+  isLoggedIn = false;
+  constructor(private adminDashService:AdminDashService, private tokenStorageService:TokenStorageService) { }
 
   ngOnInit(): void {
+    this.isLoggedIn = !!this.tokenStorageService.getToken();
+    if (this.isLoggedIn) {
+      const user = this.tokenStorageService.getUser();
+      this.username = user.username;
+      this.isAuthenticated = true;
+    }
     this.allCharities();
     this.allUsers();
     this.allDonors();
