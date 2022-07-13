@@ -55,7 +55,8 @@
     <div class="col-md-10">
       <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && postBeneficiary(f.value)"
       #f="ngForm" novalidate>
-      {{f.value | json}}
+      <!-- {{f.value | json}} -->
+      <h2 style="display:none">{{charity}}</h2>
       <h4 class="text-center">Add Beneficiary</h4>
       <div class="row">
         <div class="col-md-6">         

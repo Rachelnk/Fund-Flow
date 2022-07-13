@@ -24,7 +24,7 @@
               <th>Contact</th>
             </tr>
             <tr *ngFor="let beneficiary of beneficiaries">
-              <td>{{beneficiary.name}}</td>
+              <td>{{beneficiary.beneficiary_name}}</td>
               <td> {{beneficiary.donation_received}}</td>
               <td>{{beneficiary.location}}</td>
               <td>{{beneficiary.country}}</td>
@@ -79,7 +79,7 @@
           <div class="col-md-2"></div>
           <div class="col-md-8" style="margin-top:30px ;">
             <h2 class="text-center">Amount Raised</h2>
-            <p style="font-family: 'Secular One', sans-serif;"> <span style="color: #ED5E46; font-size: 30px;">$ {{details.current_amount}}</span><span style="font-size: 25px ;"> of {{details.target_amount}} raised</span>  </p>            
+            <p class="text-center" style="font-family: 'Secular One', sans-serif;"> <span style="color: #ED5E46; font-size: 30px;">$ {{details.current_amount}}</span><span style="font-size: 25px ;"> of {{details.target_amount}} raised</span>  </p>            
            
           </div>
           <div class="col-md-2"></div>

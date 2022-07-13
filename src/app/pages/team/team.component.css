@@ -16,7 +16,7 @@ h1 {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  box-shadow: 10px 20px 12px #727272;
+  box-shadow: 3px 4px 5px #727272;
 }
 .team-img {
   position: relative;
