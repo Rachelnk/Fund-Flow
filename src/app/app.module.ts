@@ -14,7 +14,7 @@ import { CharityDashboardComponent } from './charity-dashboard/charity-dashboard
 import { CharitydetailsFormComponent } from './charitydetails-form/charitydetails-form.component';
 import { BeneficiaryFormComponent } from './beneficiary-form/beneficiary-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule } from '@angular/material/tabs'
+import { MatTabsModule } from '@angular/material/tabs';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { TeamComponent } from './pages/team/team.component';
@@ -29,9 +29,11 @@ import { CharityFormComponent } from './component/charity-form/charity-form.comp
 import { AdminRegisterComponent } from './component/admin-register/admin-register.component';
 import { MoreComponent } from './pages/more/more.component';
 import { AdminDashComponent } from './component/admin-dash/admin-dash.component';
-import { CommonModule } from '@angular/common';
 import { DonateComponent } from './donate/donate.component';
 import { PaypalComponent } from './component/paypal/paypal.component';
+import { CommonModule } from '@angular/common';
+
+
 
 @NgModule({
   declarations: [
@@ -61,6 +63,7 @@ import { PaypalComponent } from './component/paypal/paypal.component';
     DonateComponent,
     PaypalComponent
   ],
+
   imports: [
     BrowserModule,   
     AppRoutingModule, 
