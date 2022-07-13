@@ -46,3 +46,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [ LoginComponent, CharityRegisterComponent, DonorRegisterComponent, CharityFormComponent, AdminRegisterComponent, AdminDashComponent, PaypalComponent]
+
