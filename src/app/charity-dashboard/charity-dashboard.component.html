@@ -23,12 +23,12 @@
               <th>Country</th>
               <th>Contact</th>
             </tr>
-            <tr>
-              <td>{{beneficiaries.name}}</td>
-              <td> {{beneficiaries.donation_received}}</td>
-              <td>{{beneficiaries.location}}</td>
-              <td>{{beneficiaries.country}}</td>
-              <td>{{beneficiaries.contact}}</td>
+            <tr *ngFor="let beneficiary of beneficiaries">
+              <td>{{beneficiary.name}}</td>
+              <td> {{beneficiary.donation_received}}</td>
+              <td>{{beneficiary.location}}</td>
+              <td>{{beneficiary.country}}</td>
+              <td>{{beneficiary.contact}}</td>
             </tr>
   
           </table>

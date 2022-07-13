@@ -59,5 +59,20 @@ export class AdminDashComponent implements OnInit {
     })
   
   }
+  deleteItem(charity:any){
+    this.adminDashService.deleteCharity(charity.id)
+        .subscribe(response => {
+          this.charities = this.charities.filter((item:any) => item.id !== charity.id);
+          alert("Charity Deleted")
+        });
+  }
+  deleteUser(user:any){
+    this.adminDashService.deleteUser(user.id)
+        .subscribe(response => {
+          this.users = this.users.filter((item:any) => item.id !== user.id);
+          alert("User Deleted")
+        });
+  }
+  
 
 }

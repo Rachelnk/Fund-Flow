@@ -42,16 +42,17 @@ export class CharityDashboardComponent implements OnInit {
   }
   getBeneficiaries(pk:number){
     this.charityService.getCharityBeneficiariesDashboardDetails(this.pk).subscribe((res => {
-      console.log(res)
-      this.data = res.map((items:any)=> {
-        this.beneficiaries = items
-        // console.log(items)
-      })
+      // console.log(res)
+      this.beneficiaries = res
+      // this.data = res.map((items:any)=> {
+      //   this.beneficiaries = items
+      //   // console.log(items)
+      // })
     }));
   }
   getDonations(pk:number){
     this.charityService.getCharityDonationsDashboardDetails(this.pk).subscribe((res => {
-      console.log(res)
+      // console.log(res)
       this.donations = res
       // this.data = res.map((dons:any)=> {
       //   this.donations = dons
@@ -61,7 +62,7 @@ export class CharityDashboardComponent implements OnInit {
   }
   getAnonymousDonations(pk:number){
     this.charityService.getCharityAnonymousDonationsDashboardDetails(this.pk).subscribe((res => {
-      console.log(res)
+      // console.log(res)
       this.anonymous = res
       // this.data = res.map((anondons:any)=> {
       //   this.anonymous = anondons
