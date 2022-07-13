@@ -33,7 +33,15 @@ export class CharityService {
 
   }
   public getCharityBeneficiariesDashboardDetails(pk:any):Observable<any>{
-    return this.httpClient.get('http://funds-flow.herokuapp.com/charity/'+pk+'/beneficiaries')
+    return this.httpClient.get('http://funds-flow.herokuapp.com/charity/1/beneficiaries')
+
+  }
+  public getCharityDonationsDashboardDetails(pk:any):Observable<any>{
+    return this.httpClient.get('http://funds-flow.herokuapp.com/api/charity/1/donations/')
+
+  }
+  public getCharityAnonymousDonationsDashboardDetails(pk:any):Observable<any>{
+    return this.httpClient.get('http://funds-flow.herokuapp.com/api/charity/1/anon_donations/')
 
   }
 

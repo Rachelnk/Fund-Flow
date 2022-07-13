@@ -16,6 +16,8 @@ export class CharityDashboardComponent implements OnInit {
   beneficiaries: any
   data:any
   pk:any;
+  donations:any
+  anonymous:any
   constructor(private charityService: CharityService, private tokenStorageService: TokenStorageService, private httpClient: HttpClient) { }
   
   ngOnInit(): void {
@@ -24,6 +26,8 @@ export class CharityDashboardComponent implements OnInit {
     this.id = this.currentUser.id;
     this.getCharity(this.id)
     this.getBeneficiaries(this.pk)
+    this.getDonations(this.pk)
+    this.getAnonymousDonations(this.pk)
   }
 
   getCharity(_id: any) {
@@ -41,9 +45,29 @@ export class CharityDashboardComponent implements OnInit {
       console.log(res)
       this.data = res.map((items:any)=> {
         this.beneficiaries = items
-        console.log(items)
+        // console.log(items)
       })
     }));
+  }
+  getDonations(pk:number){
+    this.charityService.getCharityDonationsDashboardDetails(this.pk).subscribe((res => {
+      console.log(res)
+      this.donations = res
+      // this.data = res.map((dons:any)=> {
+      //   this.donations = dons
+      //   console.log(dons)
+      })
+    );
+  }
+  getAnonymousDonations(pk:number){
+    this.charityService.getCharityAnonymousDonationsDashboardDetails(this.pk).subscribe((res => {
+      console.log(res)
+      this.anonymous = res
+      // this.data = res.map((anondons:any)=> {
+      //   this.anonymous = anondons
+        // console.log(anondons)
+      })
+    );
   }
 }
 

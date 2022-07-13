@@ -1,6 +1,6 @@
 <div>
 
-<h1 class="text-center">{{details.charity_name | async}}</h1>
+<h1 class="text-center">{{details.charity_name }}</h1>
 <!-- Home tab -->
 <div class="container" style="background-color: #eff6ee ;">
   <mat-tab-group mat-align-tabs="center">
@@ -26,7 +26,7 @@
             <tr>
               <td>{{beneficiaries.name}}</td>
               <td> {{beneficiaries.donation_received}}</td>
-              <td>{{beneficiaries.location | async }}</td>
+              <td>{{beneficiaries.location}}</td>
               <td>{{beneficiaries.country}}</td>
               <td>{{beneficiaries.contact}}</td>
             </tr>
@@ -50,24 +50,13 @@
               <tr>
                 <th>Donor</th>
                 <th>Amount Donated</th>
-                <th>Date Donated</th>
+                <th>Donation Frequency</th>
               </tr>
-              <tr>
-                <td>Jane Doe</td>
-                <td> Kshs. 5,000</td>
-                <td>07/06/2022</td>
-              </tr>
-              <tr>
-                <td>John Doe</td>
-                <td> Kshs. 10,000</td>
-                <td>07/05/2022</td>
-              </tr>
-              <tr>
-                <td>Rachel Kiarie</td>
-                <td>Kshs. 20,000</td>
-                <td>07/01/2022</td>
-              </tr>
-    
+              <tr *ngFor="let donation of donations">
+                <td>{{donation.first_name}}</td>
+                <td>$ {{donation.amount_raised}}</td>
+                <td>{{donation.donation_frequency}}</td>
+              </tr>    
             </table>
           </div>
           <div class="col-md-5" style="margin-top:15px ;">
@@ -75,21 +64,12 @@
             <table>
               <tr>
                 <th>Amount Donated</th>
-                <th>Date Donated</th>
+                <th>Payment Method</th>
               </tr>
-              <tr>
-                <td> Kshs. 5,000</td>
-                <td>07/06/2022</td>
-              </tr>
-              <tr>
-                <td> Kshs. 10,000</td>
-                <td>07/05/2022</td>
-              </tr>
-              <tr>
-                <td>Kshs. 20,000</td>
-                <td>07/01/2022</td>
-              </tr>
-    
+              <tr *ngFor="let anonym of anonymous">
+                <td>$ {{anonym.donation_amount}}</td>
+                <td>{{anonym.payment_method}}</td>
+              </tr>    
             </table>
           </div>
           
@@ -99,7 +79,7 @@
           <div class="col-md-2"></div>
           <div class="col-md-8" style="margin-top:30px ;">
             <h2 class="text-center">Amount Raised</h2>
-            <p style="font-family: 'Secular One', sans-serif;"> <span style="color: #ED5E46; font-size: 30px;">KSH {{details.current_amount}}</span><span style="font-size: 25px ;"> of {{details.target_amount}} raised</span>  </p>            
+            <p style="font-family: 'Secular One', sans-serif;"> <span style="color: #ED5E46; font-size: 30px;">$ {{details.current_amount}}</span><span style="font-size: 25px ;"> of {{details.target_amount}} raised</span>  </p>            
            
           </div>
           <div class="col-md-2"></div>
