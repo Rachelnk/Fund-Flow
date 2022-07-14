@@ -1,27 +1,51 @@
-# Donation
+# Automated Donation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+## Description
+##### This application provides a platform for charities to register and create their profiles which can be viewed by users who visit the platform. Users can also register as donors and donate to charities. Moreover users can donate to charities anonymously.
 
-## Development server
+## Authors
+#### Rachel Kiarie
+#### Gabriel Ndolo 
+#### Collins Sirwani
+#### Belinda Ntinyari
+#### Jefferson Karumba
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Dependencies
+* @angular/material
+* creditcardpayments
+* Supported OS Windows 10, 8, 7, MacOS, Linus distros (Ubuntu, Debian, Fedora).
 
-## Code scaffolding
+## Installation Instructions
+* npm install creditcardpayments
+* ng add @angular/material
+* Clone the repository to your local machine. e.g. `$ git clone remote URL`
+* `cd donation`
+* `npm install`
+* `ng serve` Navigate to `http://localhost:4200/`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Bugs
+There are no known bugs at the moment.
 
-## Build
+## Technologies used
+* Typescript
+* Javascript
+* HTML
+* CSS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Live link
+### https://rachelnk.github.io/Fund-Flow/
 
-## Running unit tests
+## Support and contact details
+##### You can reach out via `rachael.kiarie@student.moringaschool.com`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ ### License
+ * MIT License
+ ## Copyright (c) 2022
+ 
+ ## Contributors:
+ * Rachel Kiarie
+ * Gabriel Ndolo 
+ * Collins Sirwani
+ * Belinda Ntinyari
+ * Jefferson Karumba
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
