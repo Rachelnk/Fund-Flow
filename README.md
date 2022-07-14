@@ -5,10 +5,10 @@
 
 ## Authors
 #### Rachel Kiarie
-#### Gabriel Ndolo 
-#### Collins Sirwani
-#### Belinda Ntinyari
-#### Jefferson Karumba
+#### [Gabriel Ndolo](https://github.com/Geb54g)
+#### [Collins Sirwani](https://github.com/sircollo)
+#### [Belinda Ntinyari](https://github.com/Bel-94)
+#### [Jefferson Karumba](https://github.com/JKLLR)
 
 ## Dependencies
 * @angular/material
